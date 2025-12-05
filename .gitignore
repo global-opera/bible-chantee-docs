@@ -1,0 +1,9 @@
+# Fichiers Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Fichiers système
+.DS_Store
+Thumbs.db
