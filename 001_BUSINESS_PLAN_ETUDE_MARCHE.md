@@ -43,7 +43,7 @@ Rendre la Parole de Dieu accessible par la musique à des millions de personnes 
 
 #### Sous-segments Prioritaires
 
-**1. Égl ises et Communautés (25M personnes)**
+**1. Églises et Communautés (25M personnes)**
 
 - Églises évangéliques: 2M+ en France
 - Églises catholiques charismatiques: 5M+
@@ -128,6 +128,28 @@ Rendre la Parole de Dieu accessible par la musique à des millions de personnes 
    - Coût 12 langues: ~€171 (171,216 crédits)
    - Hébergement: Gratuit (Archive.org + GitHub Pages)
    - **Total initial: ~€200**
+
+#### Coûts Réels Engagés (Décembre 2025)
+
+1. **Génération MP3 - Suno AI**
+   - Investissement: 100 CHF (crédits Suno)
+   - Utilisation: ~490 chapitres générés (français)
+   - Tokens consommés: ~4,900 crédits (10 crédits/chapitre)
+   - Solde restant: À utiliser pour compléter FR + multilingue
+   - **Coût par chapitre: ~0.20 CHF**
+
+2. **Développement IA - Claude Pro**
+   - Abonnement: 100 CHF (mensuel)
+   - Usage: Scripts Python, automation, qualité
+   - Tokens: Illimités dans l'abonnement Pro
+   - ROI: Automatisation complète du pipeline
+
+3. **Développement - Claude Code**
+   - Tokens: 100 tokens utilisés
+   - Usage: Développement site web, scripts, documentation
+   - Efficacité: Accélération développement x10
+
+**Total Investi: 300 CHF (~280 EUR)**
 
 #### Métriques de Succès Phase 1
 
