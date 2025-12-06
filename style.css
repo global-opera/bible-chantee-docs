@@ -5,11 +5,13 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap');
+
 body {
-    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: 1.6;
     color: #333;
-    background: #f5f7fa;
+    background: #ffffff;
 }
 
 .container {
@@ -20,8 +22,8 @@ body {
 
 /* Navigation */
 .navbar {
-    background: linear-gradient(135deg, #000080 0%, #ffce00 100%);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: #000080;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -31,13 +33,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 20px;
+    padding: 1.2rem 20px;
 }
 
 .logo {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    color: #ffce00;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .nav-menu {
@@ -49,104 +53,123 @@ body {
 .nav-menu a {
     color: white;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background 0.3s ease;
+    padding: 0.7rem 1.3rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
     font-weight: 500;
 }
 
-.nav-menu a:hover,
+.nav-menu a:hover {
+    background: rgba(255, 206, 0, 0.2);
+    color: #ffce00;
+}
+
 .nav-menu a.active {
-    background: rgba(255, 255, 255, 0.2);
+    background: #ffce00;
+    color: #000080;
+    font-weight: 600;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #000080 0%, #ffce00 100%);
+    background: #000080;
     color: white;
-    padding: 4rem 0;
+    padding: 5rem 0;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: white;
 }
 
 .hero .subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    opacity: 0.95;
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+    color: #ffce00;
+    font-weight: 400;
 }
 
 .hero-description {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    padding: 1.5rem;
-    max-width: 800px;
+    background: white;
+    color: #333;
+    border-radius: 15px;
+    padding: 2.5rem;
+    max-width: 850px;
     margin: 0 auto;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
 }
 
 .hero-description p {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
 }
 
 .highlight {
-    font-weight: bold;
-    font-size: 1.2rem !important;
+    font-weight: 700;
+    font-size: 1.4rem !important;
+    color: #000080;
 }
 
 /* Metrics Section */
 .metrics {
-    padding: 3rem 0;
-    background: white;
+    padding: 5rem 0;
+    background: #f8f9fa;
 }
 
 .metrics h2 {
+    font-family: 'Playfair Display', serif;
     text-align: center;
     color: #000080;
-    margin-bottom: 2rem;
-    font-size: 2rem;
+    margin-bottom: 3.5rem;
+    font-size: 2.8rem;
+    font-weight: 700;
 }
 
 .metrics-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
 }
 
 .metric-card {
     background: white;
-    border-radius: 10px;
-    padding: 2rem;
+    border-radius: 15px;
+    padding: 3rem;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid #e5e7eb;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .metric-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
+    border-color: #ffce00;
+    box-shadow: 0 15px 40px rgba(255, 206, 0, 0.2);
 }
 
 .metric-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    margin-bottom: 1.2rem;
 }
 
 .metric-title {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     color: #666;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
 }
 
 .metric-value {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
     margin-bottom: 0.5rem;
+    color: #000080;
 }
 
 .metric-card.success .metric-value {
@@ -163,102 +186,124 @@ body {
 
 .metric-detail {
     color: #999;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
 /* Overview Section */
 .overview {
-    padding: 3rem 0;
+    padding: 5rem 0;
+    background: white;
 }
 
 .overview h2 {
+    font-family: 'Playfair Display', serif;
     text-align: center;
     color: #000080;
-    margin-bottom: 2rem;
-    font-size: 2rem;
+    margin-bottom: 3.5rem;
+    font-size: 2.8rem;
+    font-weight: 700;
 }
 
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2.5rem;
 }
 
 .doc-card {
     background: white;
-    border-radius: 10px;
-    padding: 2rem;
+    border-radius: 15px;
+    padding: 3rem;
     text-decoration: none;
     color: #333;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid #e5e7eb;
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .doc-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
+    border-color: #000080;
+    box-shadow: 0 15px 40px rgba(0, 0, 128, 0.15);
 }
 
 .card-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    margin-bottom: 1.2rem;
 }
 
 .doc-card h3 {
+    font-family: 'Playfair Display', serif;
     color: #000080;
-    margin-bottom: 0.5rem;
-    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.6rem;
+    font-weight: 700;
 }
 
 .doc-card p {
     color: #666;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     flex-grow: 1;
+    line-height: 1.7;
 }
 
 .card-count {
-    color: #ffce00;
-    font-weight: bold;
-    font-size: 0.9rem;
+    color: #000080;
+    font-weight: 700;
+    font-size: 1.05rem;
+    background: #fff8dc;
+    border: 2px solid #ffce00;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    display: inline-block;
 }
 
 /* Content Pages */
 .page-header {
-    background: linear-gradient(135deg, #000080 0%, #ffce00 100%);
+    background: #000080;
     color: white;
-    padding: 3rem 0;
+    padding: 4.5rem 0;
     text-align: center;
 }
 
 .page-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
 .page-header p {
-    font-size: 1.2rem;
-    opacity: 0.9;
+    font-size: 1.4rem;
+    color: #ffce00;
+    font-weight: 400;
 }
 
 .content-section {
-    padding: 3rem 0;
+    padding: 3.5rem 0;
     background: white;
-    margin: 2rem 0;
-    border-radius: 10px;
+    margin: 2.5rem 0;
+    border-radius: 15px;
 }
 
 .content-section h2 {
+    font-family: 'Playfair Display', serif;
     color: #000080;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid #000080;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 4px solid #ffce00;
+    font-size: 2.2rem;
+    font-weight: 700;
 }
 
 .content-section h3 {
-    color: #ffce00;
-    margin: 1.5rem 0 1rem 0;
+    font-family: 'Playfair Display', serif;
+    color: #000080;
+    margin: 2.5rem 0 1.2rem 0;
+    font-size: 1.6rem;
+    font-weight: 600;
 }
 
 .file-list {
@@ -267,25 +312,27 @@ body {
 
 .file-item {
     background: #f8f9fa;
-    margin: 0.5rem 0;
-    padding: 1rem;
-    border-radius: 8px;
-    border-left: 4px solid #000080;
-    transition: background 0.3s ease;
+    margin: 1.2rem 0;
+    padding: 1.8rem;
+    border-radius: 12px;
+    border-left: 5px solid #000080;
+    transition: all 0.3s ease;
 }
 
 .file-item:hover {
-    background: #e9ecef;
+    background: #fff8dc;
+    border-left-color: #ffce00;
+    box-shadow: 0 4px 15px rgba(255, 206, 0, 0.2);
 }
 
 .file-link {
     color: #000080;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .file-link:hover {
@@ -294,7 +341,7 @@ body {
 
 .file-link::before {
     content: "📄";
-    font-size: 1.2rem;
+    font-size: 1.6rem;
 }
 
 .excel-link::before {
@@ -303,31 +350,34 @@ body {
 
 .file-description {
     color: #666;
-    margin-top: 0.5rem;
-    font-size: 0.95rem;
-    margin-left: 2rem;
+    margin-top: 1rem;
+    font-size: 1.05rem;
+    margin-left: 2.6rem;
+    line-height: 1.7;
 }
 
 /* Footer */
 .footer {
-    background: #2d3748;
+    background: #000080;
     color: white;
     text-align: center;
-    padding: 2rem 0;
-    margin-top: 3rem;
+    padding: 3.5rem 0;
+    margin-top: 5rem;
 }
 
 .footer p {
-    margin: 0.5rem 0;
+    margin: 0.8rem 0;
+    font-size: 1.05rem;
 }
 
 .footer a {
-    color: #000080;
+    color: #ffce00;
     text-decoration: none;
+    font-weight: 600;
 }
 
 .footer a:hover {
-    color: #ffce00;
+    text-decoration: underline;
 }
 
 /* Responsive */
@@ -335,17 +385,32 @@ body {
     .nav-menu {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 0.3rem;
+    }
+
+    .nav-menu a {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .hero .subtitle {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .cards-grid {
         grid-template-columns: 1fr;
+    }
+
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .overview h2,
+    .metrics h2 {
+        font-size: 2.2rem;
     }
 }
