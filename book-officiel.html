@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Officiel - Bible Chantée</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero-book {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero-book h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .hero-book .subtitle {
+            font-size: 1.5em;
+            opacity: 0.95;
+            margin-bottom: 10px;
+        }
+        .hero-book .meta {
+            font-size: 1.1em;
+            opacity: 0.85;
+        }
+        .section-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 5px solid #667eea;
+        }
+        .section-card h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .section-card h2 .icon {
+            font-size: 1.2em;
+        }
+        .section-card p, .section-card ul {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1.1em;
+        }
+        .section-card ul {
+            padding-left: 25px;
+        }
+        .section-card li {
+            margin-bottom: 10px;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .stat-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+        }
+        .stat-item .value {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .stat-item .label {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        .values-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .value-item {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            border-top: 3px solid #667eea;
+        }
+        .value-item .icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .value-item .text {
+            color: #333;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">📖 BIBLE CHANTÉE</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="technique.html">Technique</a></li>
+                <li><a href="commercial.html" class="active">Commercial</a></li>
+                <li><a href="financier.html">Financier</a></li>
+                <li><a href="juridique.html">Juridique</a></li>
+                <li><a href="planification.html">Planification</a></li>
+                <li><a href="ressources.html">Ressources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero-book">
+        <div class="container">
+            <h1>📖 BIBLE CHANTÉE</h1>
+            <p class="subtitle">La Parole de Dieu en musique pour le monde entier</p>
+            <p class="meta">Projet international – 12 langues</p>
+            <p class="meta">Porté par : Association Bible Chantée (Suisse)</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container" style="padding: 60px 20px;">
+
+            <!-- 1. Résumé Exécutif -->
+            <div class="section-card">
+                <h2><span class="icon">📋</span> Résumé Exécutif</h2>
+                <p>La Bible Chantée est un projet international qui transforme l'intégralité de la Bible en musique afin de rendre la Parole de Dieu accessible à tous. Le projet est aujourd'hui <strong>opérationnel techniquement</strong>, disponible en <strong>12 langues</strong>, et structuré pour une diffusion gratuite mondiale.</p>
+                <div class="highlight-box">
+                    <p><strong>💡 Innovation clé :</strong> Une application mobile à 0.99 CHF permettra l'accès hors ligne. 10% des bénéfices nets seront reversés à des œuvres missionnaires.</p>
+                </div>
+            </div>
+
+            <!-- 2. Vision, Mission et Valeurs -->
+            <div class="section-card">
+                <h2><span class="icon">🎯</span> Vision, Mission et Valeurs</h2>
+
+                <h3 style="color: #667eea; font-size: 1.3em; margin: 25px 0 15px;">Vision</h3>
+                <p><strong>Que chaque être humain puisse entendre la Parole de Dieu dans sa langue par la musique.</strong></p>
+
+                <h3 style="color: #667eea; font-size: 1.3em; margin: 25px 0 15px;">Mission</h3>
+                <p>Mettre toute la Bible en musique, diffuser gratuitement au monde entier, créer une application simple et soutenir l'évangélisation mondiale.</p>
+
+                <h3 style="color: #667eea; font-size: 1.3em; margin: 25px 0 15px;">Valeurs Fondamentales</h3>
+                <div class="values-list">
+                    <div class="value-item">
+                        <div class="icon">📖</div>
+                        <div class="text">Fidélité biblique</div>
+                    </div>
+                    <div class="value-item">
+                        <div class="icon">🎁</div>
+                        <div class="text">Gratuité d'accès</div>
+                    </div>
+                    <div class="value-item">
+                        <div class="icon">⚡</div>
+                        <div class="text">Excellence technique</div>
+                    </div>
+                    <div class="value-item">
+                        <div class="icon">💎</div>
+                        <div class="text">Intégrité financière</div>
+                    </div>
+                    <div class="value-item">
+                        <div class="icon">✝️</div>
+                        <div class="text">Service du Royaume</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Le Projet Technique -->
+            <div class="section-card">
+                <h2><span class="icon">💻</span> Le Projet Technique</h2>
+                <p><strong>Pipeline automatisé</strong> de génération musicale avec une infrastructure professionnelle :</p>
+                <ul>
+                    <li><strong>12 langues actives</strong> en production</li>
+                    <li><strong>1 chapitre = 1 œuvre musicale complète</strong></li>
+                    <li>Organisation industrielle des fichiers avec métadonnées complètes</li>
+                    <li>Compatibilité totale : <strong>Spotify, YouTube, Apple Music, Deezer</strong></li>
+                    <li>Application mobile iOS & Android native</li>
+                </ul>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="value">1,189</div>
+                        <div class="label">Chapitres</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="value">14,268</div>
+                        <div class="label">Chansons totales</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="value">12</div>
+                        <div class="label">Langues</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. L'Application Mobile -->
+            <div class="section-card">
+                <h2><span class="icon">📱</span> L'Application Mobile</h2>
+                <p><strong>Disponible sur iOS & Android</strong> avec une expérience utilisateur optimale :</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 25px;">
+                    <div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%); padding: 20px; border-radius: 12px;">
+                        <h4 style="color: #667eea; margin-bottom: 10px;">🗺️ Navigation intuitive</h4>
+                        <p style="color: #666; font-size: 0.95em;">Par langue, livre et chapitre</p>
+                    </div>
+                    <div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%); padding: 20px; border-radius: 12px;">
+                        <h4 style="color: #667eea; margin-bottom: 10px;">🎵 Playlists personnalisées</h4>
+                        <p style="color: #666; font-size: 0.95em;">Créez vos lectures préférées</p>
+                    </div>
+                    <div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%); padding: 20px; border-radius: 12px;">
+                        <h4 style="color: #667eea; margin-bottom: 10px;">📥 Mode hors ligne</h4>
+                        <p style="color: #666; font-size: 0.95em;">Téléchargement pour écoute offline</p>
+                    </div>
+                    <div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%); padding: 20px; border-radius: 12px;">
+                        <h4 style="color: #667eea; margin-bottom: 10px;">🙏 Mode déclarations</h4>
+                        <p style="color: #666; font-size: 0.95em;">Parole avec lecture audio</p>
+                    </div>
+                </div>
+                <div class="highlight-box" style="margin-top: 30px;">
+                    <h3 style="color: #667eea; font-size: 1.5em; margin-bottom: 15px;">💰 Modèle de Prix</h3>
+                    <p style="font-size: 1.2em;"><strong>Gratuit</strong> à l'installation • Déblocage total à <strong>0.99 CHF</strong></p>
+                    <p style="margin-top: 10px; font-size: 0.95em; opacity: 0.9;">Prix unique, pas d'abonnement, accès illimité à vie</p>
+                </div>
+            </div>
+
+            <!-- 5. Stratégie d'Évangélisation -->
+            <div class="section-card">
+                <h2><span class="icon">🌍</span> Stratégie d'Évangélisation</h2>
+                <p>Une approche multicanale pour toucher le maximum de personnes :</p>
+                <ul>
+                    <li><strong>Diffusion gratuite sur YouTube</strong> - Chaînes dédiées par langue</li>
+                    <li><strong>Clips courts sur réseaux sociaux</strong> - TikTok, Instagram, Facebook</li>
+                    <li><strong>Packs pour églises</strong> - Licences spéciales pour utilisation en culte</li>
+                    <li><strong>Prisons, hôpitaux, pays fermés</strong> - Distribution ciblée</li>
+                    <li><strong>Utilisation en cultes, groupes de maison</strong> - Matériel pédagogique</li>
+                    <li><strong>Écoles bibliques</strong> - Outil d'apprentissage innovant</li>
+                </ul>
+            </div>
+
+            <!-- 6. Structure Juridique -->
+            <div class="section-card">
+                <h2><span class="icon">⚖️</span> Structure Juridique</h2>
+                <p>Une organisation en deux entités complémentaires :</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 25px;">
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 15px; color: white;">
+                        <h3 style="color: white; font-size: 1.4em; margin-bottom: 15px;">🏛️ Association Bible Chantée</h3>
+                        <p style="opacity: 0.95; line-height: 1.7;">Gère la mission, les dons et l'évangélisation. Structure à but non lucratif basée en Suisse.</p>
+                    </div>
+                    <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 30px; border-radius: 15px; color: white;">
+                        <h3 style="color: white; font-size: 1.4em; margin-bottom: 15px;">🏢 Future Sàrl</h3>
+                        <p style="opacity: 0.95; line-height: 1.7;">Gérera l'exploitation commerciale de l'application et des packs. Un contrat de licence liera les deux entités.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Modèle Économique -->
+            <div class="section-card">
+                <h2><span class="icon">💰</span> Modèle Économique</h2>
+                <h3 style="color: #667eea; font-size: 1.3em; margin: 25px 0 15px;">Sources de Revenus</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-bottom: 25px;">
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; text-align: center;">
+                        <div style="font-size: 2em; margin-bottom: 10px;">📱</div>
+                        <div style="color: #333; font-weight: 600;">Application mobile</div>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; text-align: center;">
+                        <div style="font-size: 2em; margin-bottom: 10px;">⛪</div>
+                        <div style="color: #333; font-weight: 600;">Packs églises</div>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; text-align: center;">
+                        <div style="font-size: 2em; margin-bottom: 10px;">📜</div>
+                        <div style="color: #333; font-weight: 600;">Licences</div>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; text-align: center;">
+                        <div style="font-size: 2em; margin-bottom: 10px;">❤️</div>
+                        <div style="color: #333; font-weight: 600;">Dons</div>
+                    </div>
+                </div>
+                <div class="highlight-box">
+                    <p style="font-size: 1.2em; text-align: center;"><strong>🌟 Engagement missionnaire : 10% des bénéfices nets reversés à des œuvres missionnaires</strong></p>
+                </div>
+            </div>
+
+            <!-- 8. Business Plan Résumé -->
+            <div class="section-card">
+                <h2><span class="icon">📈</span> Business Plan Résumé (3 ans)</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 25px;">
+                    <div style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); padding: 30px; border-radius: 15px; color: white;">
+                        <h3 style="color: white; font-size: 1.8em; margin-bottom: 15px;">Année 1</h3>
+                        <ul style="color: white; opacity: 0.95; line-height: 1.8;">
+                            <li>Lancement mondial</li>
+                            <li>Application mobile</li>
+                            <li><strong>100,000 utilisateurs</strong></li>
+                        </ul>
+                    </div>
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 15px; color: white;">
+                        <h3 style="color: white; font-size: 1.8em; margin-bottom: 15px;">Année 2</h3>
+                        <ul style="color: white; opacity: 0.95; line-height: 1.8;">
+                            <li><strong>250,000 utilisateurs</strong></li>
+                            <li>Nouvelles langues</li>
+                            <li>Afrique & Amérique latine</li>
+                        </ul>
+                    </div>
+                    <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 30px; border-radius: 15px; color: white;">
+                        <h3 style="color: white; font-size: 1.8em; margin-bottom: 15px;">Année 3</h3>
+                        <ul style="color: white; opacity: 0.95; line-height: 1.8;">
+                            <li><strong>500,000+ utilisateurs</strong></li>
+                            <li>Financement autonome</li>
+                            <li>Expansion globale</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Crowdfunding -->
+            <div class="section-card" style="border-left-color: #43e97b;">
+                <h2><span class="icon">🚀</span> Crowdfunding de Lancement</h2>
+                <div style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); padding: 40px; border-radius: 15px; color: white; text-align: center;">
+                    <h3 style="color: white; font-size: 2em; margin-bottom: 20px;">Campagne GoFundMe</h3>
+                    <div class="stats-grid">
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 12px;">
+                            <div style="font-size: 2.5em; font-weight: 700;">100,000 CHF</div>
+                            <div style="opacity: 0.9; margin-top: 10px;">Objectif</div>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 12px;">
+                            <div style="font-size: 2.5em; font-weight: 700;">45 jours</div>
+                            <div style="opacity: 0.9; margin-top: 10px;">Durée</div>
+                        </div>
+                    </div>
+                    <h4 style="color: white; font-size: 1.3em; margin: 30px 0 15px;">Utilisation des fonds</h4>
+                    <p style="opacity: 0.95; line-height: 1.8;">Application mobile • Serveurs • Constitution Sàrl • Diffusion mondiale</p>
+                </div>
+            </div>
+
+            <!-- 10. Impact Mondial -->
+            <div class="section-card">
+                <h2><span class="icon">🌍</span> Impact Mondial</h2>
+                <p>Une transformation sans précédent de l'accès à la Parole de Dieu :</p>
+                <ul>
+                    <li><strong>Diffusion massive</strong> de la Parole de Dieu dans le monde entier</li>
+                    <li><strong>Outil missionnaire mondial</strong> pour les églises et organisations</li>
+                    <li><strong>Soutien financier aux œuvres</strong> missionnaires (10% des bénéfices)</li>
+                    <li><strong>Accessibilité universelle</strong> : enfants, non-lecteurs, personnes âgées</li>
+                    <li><strong>Accompagnement</strong> des malades et personnes isolées</li>
+                    <li><strong>Innovation unique</strong> dans l'histoire de l'évangélisation</li>
+                </ul>
+            </div>
+
+            <!-- 11. Équipe -->
+            <div class="section-card">
+                <h2><span class="icon">👥</span> Équipe</h2>
+                <p><strong>Porteur du projet :</strong> Stéphane</p>
+                <p style="margin-top: 15px;">L'équipe est ouverte et en recherche active de :</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;">
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 1.8em; margin-bottom: 8px;">💻</div>
+                        <div style="color: #333; font-weight: 600;">Développeurs</div>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 1.8em; margin-bottom: 8px;">🙏</div>
+                        <div style="color: #333; font-weight: 600;">Bénévoles</div>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 1.8em; margin-bottom: 8px;">✈️</div>
+                        <div style="color: #333; font-weight: 600;">Missionnaires</div>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 1.8em; margin-bottom: 8px;">⛪</div>
+                        <div style="color: #333; font-weight: 600;">Églises partenaires</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12. Transparence -->
+            <div class="section-card" style="border-left-color: #4facfe;">
+                <h2><span class="icon">💎</span> Transparence et Engagement</h2>
+                <p>Un engagement total envers la transparence financière et opérationnelle :</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 25px;">
+                    <div style="background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(0, 242, 254, 0.1) 100%); padding: 20px; border-radius: 12px; border-left: 3px solid #4facfe;">
+                        <h4 style="color: #4facfe; margin-bottom: 10px;">📊 Comptabilité dédiée</h4>
+                        <p style="color: #666; font-size: 0.95em;">Suivi rigoureux de toutes les transactions</p>
+                    </div>
+                    <div style="background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(0, 242, 254, 0.1) 100%); padding: 20px; border-radius: 12px; border-left: 3px solid #4facfe;">
+                        <h4 style="color: #4facfe; margin-bottom: 10px;">📈 Publication annuelle</h4>
+                        <p style="color: #666; font-size: 0.95em;">Rapports financiers détaillés publics</p>
+                    </div>
+                    <div style="background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(0, 242, 254, 0.1) 100%); padding: 20px; border-radius: 12px; border-left: 3px solid #4facfe;">
+                        <h4 style="color: #4facfe; margin-bottom: 10px;">🎯 Suivi des dons missionnaires</h4>
+                        <p style="color: #666; font-size: 0.95em;">Traçabilité complète des 10%</p>
+                    </div>
+                    <div style="background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(0, 242, 254, 0.1) 100%); padding: 20px; border-radius: 12px; border-left: 3px solid #4facfe;">
+                        <h4 style="color: #4facfe; margin-bottom: 10px;">📋 Rapports publics</h4>
+                        <p style="color: #666; font-size: 0.95em;">Communication régulière à la communauté</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Final -->
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 60px 40px; border-radius: 20px; text-align: center; color: white; margin-top: 40px;">
+                <h2 style="color: white; font-size: 2.5em; margin-bottom: 20px;">🙏 Rejoignez l'Aventure</h2>
+                <p style="font-size: 1.3em; opacity: 0.95; max-width: 700px; margin: 0 auto 30px;">Participez à la diffusion de la Parole de Dieu en musique dans le monde entier</p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="commercial.html" style="background: white; color: #667eea; padding: 18px 40px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 1.2em; display: inline-block; box-shadow: 0 5px 20px rgba(0,0,0,0.2);">
+                        📚 Voir tous les documents
+                    </a>
+                    <a href="mailto:scassani1964@gmail.com" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white; padding: 18px 40px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 1.2em; display: inline-block;">
+                        ✉️ Nous contacter
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Bible Chantée - Tous droits réservés</p>
+            <p>Contact: <a href="mailto:scassani1964@gmail.com">scassani1964@gmail.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>
