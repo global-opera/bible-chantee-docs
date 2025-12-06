@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Plan - Bible Chantée</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            background: white;
+            border-radius: 15px;
+            line-height: 1.8;
+        }
+
+        .markdown-content h1 {
+            font-family: 'Playfair Display', serif;
+            color: #000080;
+            font-size: 3rem;
+            margin: 2rem 0 1.5rem 0;
+            padding-bottom: 1rem;
+            border-bottom: 4px solid #ffce00;
+        }
+
+        .markdown-content h2 {
+            font-family: 'Playfair Display', serif;
+            color: #000080;
+            font-size: 2.2rem;
+            margin: 2.5rem 0 1.2rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #ffce00;
+        }
+
+        .markdown-content h3 {
+            font-family: 'Playfair Display', serif;
+            color: #000080;
+            font-size: 1.6rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .markdown-content h4 {
+            color: #000080;
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.8rem 0;
+            font-weight: 600;
+        }
+
+        .markdown-content p {
+            margin: 1rem 0;
+            color: #333;
+        }
+
+        .markdown-content ul, .markdown-content ol {
+            margin: 1rem 0 1rem 2rem;
+            color: #333;
+        }
+
+        .markdown-content li {
+            margin: 0.5rem 0;
+        }
+
+        .markdown-content strong {
+            color: #000080;
+            font-weight: 600;
+        }
+
+        .markdown-content hr {
+            border: none;
+            border-top: 2px solid #e5e7eb;
+            margin: 3rem 0;
+        }
+
+        .markdown-content blockquote {
+            border-left: 5px solid #ffce00;
+            background: #fff8dc;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .markdown-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        .markdown-content th {
+            background: #000080;
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .markdown-content td {
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .markdown-content tr:hover {
+            background: #f8f9fa;
+        }
+
+        .markdown-content code {
+            background: #f8f9fa;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            color: #000080;
+            font-family: 'Courier New', monospace;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 5rem;
+            color: #666;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">📖 BIBLE CHANTÉE</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="technique.html">Technique</a></li>
+                <li><a href="commercial.html">Commercial</a></li>
+                <li><a href="financier.html">Financier</a></li>
+                <li><a href="juridique.html">Juridique</a></li>
+                <li><a href="planification.html">Planification</a></li>
+                <li><a href="ressources.html">Ressources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>📊 Business Plan & Étude de Marché</h1>
+            <p>Stratégie et vision du projet Bible Chantée</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="markdown-content" id="content">
+            <div class="loading">Chargement du business plan...</div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Bible Chantée - Stéphane Cassani</p>
+            <p>Tous droits d'auteur réservés</p>
+        </div>
+    </footer>
+
+    <script>
+        // Charger et afficher le contenu markdown
+        fetch('001_BUSINESS_PLAN_ETUDE_MARCHE.md')
+            .then(response => response.text())
+            .then(markdown => {
+                const contentDiv = document.getElementById('content');
+                contentDiv.innerHTML = marked.parse(markdown);
+            })
+            .catch(error => {
+                console.error('Erreur lors du chargement:', error);
+                document.getElementById('content').innerHTML =
+                    '<p style="color: red;">Erreur lors du chargement du business plan.</p>';
+            });
+    </script>
+</body>
+</html>
