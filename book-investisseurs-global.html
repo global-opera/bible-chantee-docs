@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Investisseurs Global - Bible Chantée Sàrl</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero-global {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
+        }
+        .hero-global h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.2);
+        }
+        .hero-global .subtitle {
+            font-size: 1.6em;
+            opacity: 0.95;
+            font-weight: 600;
+        }
+        .nav-sections {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-sections ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-sections a {
+            padding: 10px 25px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .nav-sections a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(240, 147, 251, 0.4);
+        }
+        .section-global {
+            background: white;
+            padding: 60px 50px;
+            margin: 40px 0;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            border-top: 6px solid #f093fb;
+        }
+        .section-global h2 {
+            color: #f093fb;
+            font-size: 3em;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .section-global h3 {
+            color: #333;
+            font-size: 1.8em;
+            margin: 30px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        .stats-mega {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        .stat-mega {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(240, 147, 251, 0.3);
+        }
+        .stat-mega-value {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .stat-mega-label {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        .info-box {
+            background: linear-gradient(135deg, rgba(240, 147, 251, 0.1) 0%, rgba(245, 87, 108, 0.1) 100%);
+            padding: 35px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border-left: 6px solid #f093fb;
+        }
+        .table-pro {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        .table-pro thead {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+        .table-pro th {
+            padding: 20px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+        .table-pro td {
+            padding: 18px 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .table-pro tbody tr:hover {
+            background: rgba(240, 147, 251, 0.05);
+        }
+        .timeline-pro {
+            position: relative;
+            padding: 40px 0;
+        }
+        .timeline-item-pro {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .timeline-item-pro::before {
+            content: '';
+            position: absolute;
+            left: 40px;
+            top: 60px;
+            bottom: -40px;
+            width: 3px;
+            background: linear-gradient(to bottom, #f093fb 0%, #f5576c 100%);
+        }
+        .timeline-year-pro {
+            flex-shrink: 0;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.5em;
+            box-shadow: 0 5px 20px rgba(240, 147, 251, 0.4);
+            position: relative;
+            z-index: 2;
+        }
+        .timeline-content-pro {
+            flex: 1;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid #f0f0f0;
+        }
+        .risk-level {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+        .risk-low { background: #d4edda; color: #155724; }
+        .risk-medium { background: #fff3cd; color: #856404; }
+        .risk-high { background: #f8d7da; color: #721c24; }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .card-pro {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid #f0f0f0;
+            transition: all 0.3s ease;
+        }
+        .card-pro:hover {
+            border-color: #f093fb;
+            box-shadow: 0 10px 30px rgba(240, 147, 251, 0.2);
+            transform: translateY(-5px);
+        }
+        .card-pro h4 {
+            color: #f093fb;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">📖 BIBLE CHANTÉE</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="technique.html">Technique</a></li>
+                <li><a href="commercial.html">Commercial</a></li>
+                <li><a href="financier.html" class="active">Financier</a></li>
+                <li><a href="juridique.html">Juridique</a></li>
+                <li><a href="planification.html">Planification</a></li>
+                <li><a href="ressources.html">Ressources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero-global">
+        <div class="container">
+            <h1>📊 BOOK INVESTISSEURS GLOBAL</h1>
+            <p class="subtitle">Bible Chantée Sàrl</p>
+            <p style="font-size: 1.2em; margin-top: 20px; opacity: 0.9;">Vision • Technique • Business • Financier • Juridique • Missions</p>
+        </div>
+    </header>
+
+    <nav class="nav-sections">
+        <ul>
+            <li><a href="#vision">🎯 Vision</a></li>
+            <li><a href="#technologie">⚙️ Technologie</a></li>
+            <li><a href="#business">💼 Business</a></li>
+            <li><a href="#financier">💰 Financier</a></li>
+            <li><a href="#juridique">⚖️ Juridique</a></li>
+            <li><a href="#missions">❤️ Missions</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container" style="padding: 50px 20px;">
+
+            <!-- VISION -->
+            <section id="vision" class="section-global">
+                <h2><span>🎯</span> Vision</h2>
+
+                <div class="info-box">
+                    <h3 style="color: #f093fb; border: none; padding: 0; margin: 0 0 20px 0;">Diffusion mondiale gratuite de la Bible en musique en 12 langues</h3>
+                    <p style="font-size: 1.2em; line-height: 1.9;">
+                        Transformer l'intégralité de la <strong>Bible (1,189 chapitres)</strong> en chansons worship accessibles
+                        gratuitement dans <strong>12 langues</strong>, en utilisant l'intelligence artificielle musicale.
+                        Rendre la Parole de Dieu accessible par la musique à des <strong>millions de personnes</strong> dans le monde,
+                        en créant la <strong>première Bible entièrement chantée</strong> en format moderne.
+                    </p>
+                </div>
+
+                <h3>🌟 Innovation Unique</h3>
+                <div class="stats-mega">
+                    <div class="stat-mega">
+                        <div class="stat-mega-value">1,189</div>
+                        <div class="stat-mega-label">Chapitres Bibliques</div>
+                    </div>
+                    <div class="stat-mega">
+                        <div class="stat-mega-value">12</div>
+                        <div class="stat-mega-label">Langues</div>
+                    </div>
+                    <div class="stat-mega">
+                        <div class="stat-mega-value">14,268</div>
+                        <div class="stat-mega-label">Chansons Totales</div>
+                    </div>
+                    <div class="stat-mega">
+                        <div class="stat-mega-value">2.5B</div>
+                        <div class="stat-mega-label">Chrétiens Mondiaux</div>
+                    </div>
+                </div>
+
+                <h3>🎯 Mission</h3>
+                <div class="grid-2">
+                    <div class="card-pro">
+                        <h4>Accessibilité Universelle</h4>
+                        <p>Rendre la Bible accessible aux enfants, non-lecteurs, personnes âgées, malades, et personnes isolées grâce au format musical.</p>
+                    </div>
+                    <div class="card-pro">
+                        <h4>Outil Missionnaire</h4>
+                        <p>Fournir aux églises et organisations un outil puissant de diffusion mondiale de la Parole de Dieu.</p>
+                    </div>
+                    <div class="card-pro">
+                        <h4>Innovation Technologique</h4>
+                        <p>Utiliser l'IA de pointe (Suno V4) pour créer une qualité professionnelle à échelle industrielle.</p>
+                    </div>
+                    <div class="card-pro">
+                        <h4>Gratuit & Libre</h4>
+                        <p>Accès 100% gratuit via web et streaming pour maximiser l'impact spirituel.</p>
+                    </div>
+                </div>
+
+                <h3>🌍 Langues Cibles</h3>
+                <table class="table-pro">
+                    <thead>
+                        <tr>
+                            <th>Langue</th>
+                            <th>Chrétiens</th>
+                            <th>Priorité</th>
+                            <th>Statut</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>🇫🇷 Français</td>
+                            <td>100M</td>
+                            <td><span class="risk-high">P0</span></td>
+                            <td>En cours (490/1,189)</td>
+                        </tr>
+                        <tr>
+                            <td>🇬🇧 Anglais</td>
+                            <td>600M</td>
+                            <td><span class="risk-high">P1</span></td>
+                            <td>Q1 2026</td>
+                        </tr>
+                        <tr>
+                            <td>🇪🇸 Espagnol</td>
+                            <td>500M</td>
+                            <td><span class="risk-high">P1</span></td>
+                            <td>Q1 2026</td>
+                        </tr>
+                        <tr>
+                            <td>🇵🇹 Portugais</td>
+                            <td>200M</td>
+                            <td><span class="risk-high">P1</span></td>
+                            <td>Q1 2026</td>
+                        </tr>
+                        <tr>
+                            <td>🇩🇪 Allemand</td>
+                            <td>80M</td>
+                            <td><span class="risk-medium">P2</span></td>
+                            <td>Q2 2026</td>
+                        </tr>
+                        <tr>
+                            <td>🇮🇹 Italien</td>
+                            <td>60M</td>
+                            <td><span class="risk-medium">P2</span></td>
+                            <td>Q2 2026</td>
+                        </tr>
+                        <tr>
+                            <td>🇵🇱 Polonais</td>
+                            <td>35M</td>
+                            <td><span class="risk-medium">P2</span></td>
+                            <td>Q2 2026</td>
+                        </tr>
+                        <tr>
+                            <td>🇷🇴 Roumain</td>
+                            <td>20M</td>
+                            <td><span class="risk-medium">P2</span></td>
+                            <td>Q2 2026</td>
+                        </tr>
+                        <tr>
+                            <td>🇷🇺 Russe</td>
+                            <td>100M</td>
+                            <td><span class="risk-low">P3</span></td>
+                            <td>Q3-Q4 2026</td>
+                        </tr>
+                        <tr>
+                            <td>🇨🇳 Chinois</td>
+                            <td>100M</td>
+                            <td><span class="risk-low">P3</span></td>
+                            <td>Q3-Q4 2026</td>
+                        </tr>
+                        <tr>
+                            <td>🇯🇵 Japonais</td>
+                            <td>4M</td>
+                            <td><span class="risk-low">P3</span></td>
+                            <td>Q3-Q4 2026</td>
+                        </tr>
+                        <tr>
+                            <td>🇰🇷 Coréen</td>
+                            <td>15M</td>
+                            <td><span class="risk-low">P3</span></td>
+                            <td>Q3-Q4 2026</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- TECHNOLOGIE -->
+            <section id="technologie" class="section-global">
+                <h2><span>⚙️</span> Technologie</h2>
+
+                <div class="info-box">
+                    <h3 style="color: #f093fb; border: none; padding: 0; margin: 0 0 20px 0;">Pipeline automatisé, app mobile, plateformes de streaming</h3>
+                    <p style="font-size: 1.2em; line-height: 1.9;">
+                        Architecture technique <strong>100% automatisée</strong> permettant la génération industrielle de
+                        <strong>14,268 chansons</strong> en 12 langues. Pipeline Python + Suno AI V4 + distribution multi-plateformes
+                        (Archive.org, Spotify, YouTube, app mobile).
+                    </p>
+                </div>
+
+                <h3>🤖 Stack Technologique</h3>
+                <div class="grid-2">
+                    <div class="card-pro">
+                        <h4>🎵 Suno AI V4_5ALL</h4>
+                        <p><strong>Génération musicale professionnelle</strong></p>
+                        <ul style="margin-top: 10px; line-height: 1.8;">
+                            <li>Qualité studio automatique</li>
+                            <li>Styles worship variés</li>
+                            <li>Coût: 10 crédits/chapitre (0.20 CHF)</li>
+                            <li>Production: 5-10 chapitres/heure</li>
+                        </ul>
+                    </div>
+                    <div class="card-pro">
+                        <h4>🐍 Python Automation</h4>
+                        <p><strong>Pipeline de génération automatisé</strong></p>
+                        <ul style="margin-top: 10px; line-height: 1.8;">
+                            <li>Scripts watchdog 24/7</li>
+                            <li>Reprise après interruption</li>
+                            <li>Validation qualité automatique</li>
+                            <li>Export multiplateforme</li>
+                        </ul>
+                    </div>
+                    <div class="card-pro">
+                        <h4>☁️ Hébergement & Distribution</h4>
+                        <p><strong>Infrastructure scalable mondiale</strong></p>
+                        <ul style="margin-top: 10px; line-height: 1.8;">
+                            <li>Archive.org (gratuit, illimité)</li>
+                            <li>GitHub Pages (site web)</li>
+                            <li>Spotify, Apple Music, YouTube</li>
+                            <li>CDN global</li>
+                        </ul>
+                    </div>
+                    <div class="card-pro">
+                        <h4>📱 Application Mobile</h4>
+                        <p><strong>React Native (iOS/Android)</strong></p>
+                        <ul style="margin-top: 10px; line-height: 1.8;">
+                            <li>Téléchargement offline</li>
+                            <li>Notifications quotidiennes</li>
+                            <li>Playlists personnalisées</li>
+                            <li>Navigation par livre/chapitre</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>⚡ Performance & Scalabilité</h3>
+                <table class="table-pro">
+                    <thead>
+                        <tr>
+                            <th>Métrique</th>
+                            <th>Valeur</th>
+                            <th>Détails</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Vitesse génération</td>
+                            <td><strong>5-10 chapitres/heure</strong></td>
+                            <td>2 instances parallèles actives</td>
+                        </tr>
+                        <tr>
+                            <td>Temps total FR</td>
+                            <td><strong>80-150 heures</strong></td>
+                            <td>775 chapitres restants</td>
+                        </tr>
+                        <tr>
+                            <td>Coût par langue</td>
+                            <td><strong>~14 EUR</strong></td>
+                            <td>1,189 chapitres × 0.20 CHF</td>
+                        </tr>
+                        <tr>
+                            <td>Coût 12 langues</td>
+                            <td><strong>171 EUR</strong></td>
+                            <td>14,268 chansons totales</td>
+                        </tr>
+                        <tr>
+                            <td>Stockage MP3</td>
+                            <td><strong>~150 GB</strong></td>
+                            <td>Gratuit sur Archive.org</td>
+                        </tr>
+                        <tr>
+                            <td>Bande passante</td>
+                            <td><strong>Illimitée</strong></td>
+                            <td>CDN Archive.org</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box" style="margin-top: 30px;">
+                    <h4 style="color: #f093fb; margin-bottom: 15px;">✅ Avantages Techniques</h4>
+                    <ul style="font-size: 1.1em; line-height: 2;">
+                        <li><strong>Coût marginal quasi nul</strong> : une fois développé, reproduction gratuite</li>
+                        <li><strong>Scalabilité mondiale</strong> : ajout de langues sans infrastructure additionnelle</li>
+                        <li><strong>Qualité garantie</strong> : Suno AI V4 = qualité professionnelle constante</li>
+                        <li><strong>Automatisation complète</strong> : zéro intervention manuelle après lancement</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- BUSINESS -->
+            <section id="business" class="section-global">
+                <h2><span>💼</span> Business Model</h2>
+
+                <div class="info-box">
+                    <h3 style="color: #f093fb; border: none; padding: 0; margin: 0 0 20px 0;">App 0.99 CHF, licences églises, packs, dons</h3>
+                    <p style="font-size: 1.2em; line-height: 1.9;">
+                        Modèle <strong>freemium multi-flux</strong> : contenu 100% gratuit pour maximiser l'impact, monétisation
+                        via micro-paiement app (0.99 CHF), licences B2B églises/radios, dons récurrents, et produits dérivés.
+                        <strong>Mission avant profit.</strong>
+                    </p>
+                </div>
+
+                <h3>💰 Flux de Revenus</h3>
+                <div class="stats-mega">
+                    <div class="stat-mega">
+                        <div class="stat-mega-value">€420K</div>
+                        <div class="stat-mega-label">Dons & Crowdfunding</div>
+                        <div style="margin-top: 15px; opacity: 0.9; font-size: 0.9em;">Phase 2 (an 1)</div>
+                    </div>
+                    <div class="stat-mega">
+                        <div class="stat-mega-value">€150K</div>
+                        <div class="stat-mega-label">Licences B2B</div>
+                        <div style="margin-top: 15px; opacity: 0.9; font-size: 0.9em;">Églises + Radios</div>
+                    </div>
+                    <div class="stat-mega">
+                        <div class="stat-mega-value">€125K</div>
+                        <div class="stat-mega-label">Produits Dérivés</div>
+                        <div style="margin-top: 15px; opacity: 0.9; font-size: 0.9em;">CDs, Livres, Merch</div>
+                    </div>
+                    <div class="stat-mega">
+                        <div class="stat-mega-value">€720K</div>
+                        <div class="stat-mega-label">Premium</div>
+                        <div style="margin-top: 15px; opacity: 0.9; font-size: 0.9em;">Phase 3 (an 2+)</div>
+                    </div>
+                </div>
+
+                <h3>📱 Produits & Services</h3>
+                <table class="table-pro">
+                    <thead>
+                        <tr>
+                            <th>Produit</th>
+                            <th>Prix</th>
+                            <th>Marché</th>
+                            <th>Revenus Estimés</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>App Mobile</strong></td>
+                            <td>0.99 CHF</td>
+                            <td>Grand public</td>
+                            <td>Inclus dans Premium</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Licences Églises</strong></td>
+                            <td>50-200 EUR/an</td>
+                            <td>1,000 organisations</td>
+                            <td>€100K/an</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Licences Radios</strong></td>
+                            <td>500-2K EUR/an</td>
+                            <td>50 radios</td>
+                            <td>€50K/an</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Patreon/Tipeee</strong></td>
+                            <td>1-5 EUR/mois</td>
+                            <td>5,000 supporters</td>
+                            <td>€180K/an</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dons Ponctuels</strong></td>
+                            <td>Variable</td>
+                            <td>Donateurs</td>
+                            <td>€60K/an</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sponsoring Églises</strong></td>
+                            <td>100-500 EUR/mois</td>
+                            <td>50 églises</td>
+                            <td>€180K/an</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Premium Services</strong></td>
+                            <td>5-10 EUR/mois</td>
+                            <td>10,000 abonnés</td>
+                            <td>€720K/an</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CDs Physiques</strong></td>
+                            <td>15 EUR</td>
+                            <td>5,000 ventes/an</td>
+                            <td>€75K/an</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Livres Paroles</strong></td>
+                            <td>20 EUR</td>
+                            <td>2,000 ventes/an</td>
+                            <td>€40K/an</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>🎯 Marché Cible</h3>
+                <div class="grid-2">
+                    <div class="card-pro">
+                        <h4>🏛️ Églises & Communautés (25M)</h4>
+                        <ul style="line-height: 1.8;">
+                            <li>Églises évangéliques: 2M+</li>
+                            <li>Églises catholiques charismatiques: 5M+</li>
+                            <li>Communautés protestantes: 3M+</li>
+                            <li>Groupes jeunes: 5M+</li>
+                            <li>Écoles du dimanche: 10M+ enfants</li>
+                        </ul>
+                    </div>
+                    <div class="card-pro">
+                        <h4>🎥 Créateurs de Contenu (500K)</h4>
+                        <ul style="line-height: 1.8;">
+                            <li>YouTubers chrétiens: 50K</li>
+                            <li>Podcasters spirituels: 100K</li>
+                            <li>Influenceurs religieux: 200K</li>
+                            <li>Blogueurs: 150K</li>
+                        </ul>
+                    </div>
+                    <div class="card-pro">
+                        <h4>🙏 Individuels (50M)</h4>
+                        <ul style="line-height: 1.8;">
+                            <li>Recherche spirituelle: 20M</li>
+                            <li>Lecteurs Bible réguliers: 15M</li>
+                            <li>Auditeurs worship: 15M</li>
+                        </ul>
+                    </div>
+                    <div class="card-pro">
+                        <h4>🌍 International (2.5B)</h4>
+                        <ul style="line-height: 1.8;">
+                            <li>Anglophones: 600M</li>
+                            <li>Hispanophones: 500M</li>
+                            <li>Lusophones: 200M</li>
+                            <li>Autres: 1.2 milliard</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FINANCIER -->
+            <section id="financier" class="section-global">
+                <h2><span>💰</span> Projections Financières</h2>
+
+                <div class="info-box">
+                    <h3 style="color: #f093fb; border: none; padding: 0; margin: 0 0 20px 0;">Scénarios 6 mois, prévisionnel 3 ans, break-even calculé</h3>
+                    <p style="font-size: 1.2em; line-height: 1.9;">
+                        Modèle financier <strong>conservateur</strong> avec 3 scénarios (pessimiste, réaliste, optimiste).
+                        Investissement initial minimal (<strong>300 CHF</strong>), rentabilité dès l'année 2, ROI <strong>7,000%</strong>
+                        sur 3 ans.
+                    </p>
+                </div>
+
+                <h3>📊 Projection 3 Ans</h3>
+                <table class="table-pro">
+                    <thead>
+                        <tr>
+                            <th>Année</th>
+                            <th>Phase</th>
+                            <th>Revenus</th>
+                            <th>Coûts</th>
+                            <th>Bénéfice Net</th>
+                            <th>ROI</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>2025</strong></td>
+                            <td>Lancement</td>
+                            <td>€0</td>
+                            <td>€280</td>
+                            <td style="color: #d32f2f;">-€280</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2026</strong></td>
+                            <td>Croissance</td>
+                            <td>€695K</td>
+                            <td>€50K</td>
+                            <td style="color: #388e3c;">+€645K</td>
+                            <td style="color: #388e3c;">+230,357%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2027</strong></td>
+                            <td>Expansion</td>
+                            <td>€1,545K</td>
+                            <td>€150K</td>
+                            <td style="color: #388e3c;">+€1,395K</td>
+                            <td style="color: #388e3c;">+498,214%</td>
+                        </tr>
+                        <tr style="background: rgba(240, 147, 251, 0.1); font-weight: 700;">
+                            <td colspan="4"><strong>TOTAL 3 ANS</strong></td>
+                            <td style="color: #388e3c;">+€1,760K</td>
+                            <td style="color: #388e3c;">+628,571%</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>💸 Coûts Réels Engagés (Décembre 2025)</h3>
+                <div class="stats-mega">
+                    <div class="stat-mega">
+                        <div class="stat-mega-value">100 CHF</div>
+                        <div class="stat-mega-label">Suno AI</div>
+                        <div style="margin-top: 15px; opacity: 0.9; font-size: 0.9em;">490 chapitres FR</div>
+                    </div>
+                    <div class="stat-mega">
+                        <div class="stat-mega-value">100 CHF</div>
+                        <div class="stat-mega-label">Claude Pro</div>
+                        <div style="margin-top: 15px; opacity: 0.9; font-size: 0.9em;">Automation IA</div>
+                    </div>
+                    <div class="stat-mega">
+                        <div class="stat-mega-value">100 CHF</div>
+                        <div class="stat-mega-label">Claude Code</div>
+                        <div style="margin-top: 15px; opacity: 0.9; font-size: 0.9em;">Développement</div>
+                    </div>
+                    <div class="stat-mega">
+                        <div class="stat-mega-value">300 CHF</div>
+                        <div class="stat-mega-label">Total Investi</div>
+                        <div style="margin-top: 15px; opacity: 0.9; font-size: 0.9em;">~280 EUR</div>
+                    </div>
+                </div>
+
+                <h3>📈 KPIs & Objectifs</h3>
+                <table class="table-pro">
+                    <thead>
+                        <tr>
+                            <th>KPI</th>
+                            <th>6 Mois</th>
+                            <th>12 Mois</th>
+                            <th>36 Mois</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Visiteurs/mois</strong></td>
+                            <td>100K</td>
+                            <td>500K</td>
+                            <td>5M</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Streams/mois</strong></td>
+                            <td>500K</td>
+                            <td>2M</td>
+                            <td>20M</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Abonnés Newsletter</strong></td>
+                            <td>10K</td>
+                            <td>50K</td>
+                            <td>500K</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Followers Réseaux</strong></td>
+                            <td>50K</td>
+                            <td>100K</td>
+                            <td>1M</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Églises Partenaires</strong></td>
+                            <td>50</td>
+                            <td>200</td>
+                            <td>1,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Téléchargements App</strong></td>
+                            <td>-</td>
+                            <td>50K</td>
+                            <td>500K</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Supporters Réguliers</strong></td>
+                            <td>100</td>
+                            <td>5,000</td>
+                            <td>50,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>🚀 Vision 5 Ans</h3>
+                <div class="timeline-pro">
+                    <div class="timeline-item-pro">
+                        <div class="timeline-year-pro">2025</div>
+                        <div class="timeline-content-pro">
+                            <h4 style="color: #f093fb; margin-bottom: 10px;">Année 0: Lancement</h4>
+                            <p><strong>Objectifs:</strong> Bible FR complète (1,189 chapitres), site web professionnel live, 100K visiteurs/mois</p>
+                            <p style="margin-top: 10px;"><strong>Revenus:</strong> €0 • <strong>Coûts:</strong> €280</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item-pro">
+                        <div class="timeline-year-pro">2026</div>
+                        <div class="timeline-content-pro">
+                            <h4 style="color: #f093fb; margin-bottom: 10px;">Année 1: Croissance</h4>
+                            <p><strong>Objectifs:</strong> 12 langues déployées, 500K streams/mois, app mobile, 50 églises partenaires</p>
+                            <p style="margin-top: 10px;"><strong>Revenus:</strong> €695K • <strong>Bénéfice:</strong> +€645K</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item-pro">
+                        <div class="timeline-year-pro">2027</div>
+                        <div class="timeline-content-pro">
+                            <h4 style="color: #f093fb; margin-bottom: 10px;">Année 2: Expansion</h4>
+                            <p><strong>Objectifs:</strong> 1M utilisateurs actifs/mois, services premium, intégrations majeures (Spotify, YouVersion)</p>
+                            <p style="margin-top: 10px;"><strong>Revenus:</strong> €1.5M • <strong>Bénéfice:</strong> +€1.4M</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item-pro">
+                        <div class="timeline-year-pro">2028</div>
+                        <div class="timeline-content-pro">
+                            <h4 style="color: #f093fb; margin-bottom: 10px;">Année 3: Consolidation</h4>
+                            <p><strong>Objectifs:</strong> 20 langues, 5M utilisateurs, 1,000 églises partenaires, formations & consulting</p>
+                            <p style="margin-top: 10px;"><strong>Revenus estimés:</strong> €3M+</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item-pro" style="margin-bottom: 0;">
+                        <div class="timeline-year-pro">2029</div>
+                        <div class="timeline-content-pro">
+                            <h4 style="color: #f093fb; margin-bottom: 10px;">Année 4: Leadership</h4>
+                            <p><strong>Objectifs:</strong> Référence mondiale Bible musicale, 10M utilisateurs, expansion Asie/Afrique</p>
+                            <p style="margin-top: 10px;"><strong>Revenus estimés:</strong> €6M+</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- JURIDIQUE -->
+            <section id="juridique" class="section-global">
+                <h2><span>⚖️</span> Cadre Juridique</h2>
+
+                <div class="info-box">
+                    <h3 style="color: #f093fb; border: none; padding: 0; margin: 0 0 20px 0;">RGPD, CGU, Mentions légales, licences églises, droits d'auteur</h3>
+                    <p style="font-size: 1.2em; line-height: 1.9;">
+                        Structure juridique <strong>hybride sécurisée</strong> : Association propriétaire de l'IP + Sàrl exploitante
+                        pour la commercialisation. Conformité totale RGPD, licences Creative Commons, traductions domaine public.
+                    </p>
+                </div>
+
+                <h3>🏢 Structure Organisationnelle</h3>
+                <div class="grid-2">
+                    <div class="card-pro" style="border-color: #f093fb;">
+                        <h4>🏛️ Association Bible Chantée</h4>
+                        <p style="margin-bottom: 15px;"><strong>Rôle:</strong> Propriétaire intellectuel</p>
+                        <ul style="line-height: 1.8;">
+                            <li>Détient 100% des droits d'auteur</li>
+                            <li>Propriétaire des marques</li>
+                            <li>Gardienne de la mission</li>
+                            <li>Structure à but non lucratif</li>
+                            <li>Suisse (avantages fiscaux)</li>
+                        </ul>
+                    </div>
+                    <div class="card-pro" style="border-color: #f5576c;">
+                        <h4>💼 Bible Chantée Sàrl</h4>
+                        <p style="margin-bottom: 15px;"><strong>Rôle:</strong> Exploitante commerciale</p>
+                        <ul style="line-height: 1.8;">
+                            <li>Licence d'exploitation par l'Association</li>
+                            <li>Commercialisation produits/services</li>
+                            <li>Développement technique</li>
+                            <li>Marketing & distribution</li>
+                            <li>Reverse 15% à l'Association</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>📜 Conformité Légale</h3>
+                <table class="table-pro">
+                    <thead>
+                        <tr>
+                            <th>Domaine</th>
+                            <th>Document</th>
+                            <th>Statut</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Protection Données</td>
+                            <td><a href="registre-rgpd.html" style="color: #f093fb;">Registre RGPD</a></td>
+                            <td><span class="risk-low">✅ Conforme</span></td>
+                        </tr>
+                        <tr>
+                            <td>Conditions Générales</td>
+                            <td><a href="cgu.html" style="color: #f093fb;">CGU</a></td>
+                            <td><span class="risk-low">✅ Prêt</span></td>
+                        </tr>
+                        <tr>
+                            <td>Mentions Légales</td>
+                            <td><a href="mentions-legales.html" style="color: #f093fb;">Mentions</a></td>
+                            <td><span class="risk-low">✅ Prêt</span></td>
+                        </tr>
+                        <tr>
+                            <td>Politique Confidentialité</td>
+                            <td><a href="politique-confidentialite.html" style="color: #f093fb;">Privacy Policy</a></td>
+                            <td><span class="risk-low">✅ Prêt</span></td>
+                        </tr>
+                        <tr>
+                            <td>Licences Églises</td>
+                            <td><a href="licence-eglise.html" style="color: #f093fb;">Contrat Type</a></td>
+                            <td><span class="risk-low">✅ Prêt</span></td>
+                        </tr>
+                        <tr>
+                            <td>Droits d'Auteur</td>
+                            <td>CC BY-NC 4.0</td>
+                            <td><span class="risk-low">✅ Validé</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>⚖️ Propriété Intellectuelle</h3>
+                <div class="info-box">
+                    <h4 style="color: #f093fb; margin-bottom: 15px;">Stratégie IP Sécurisée</h4>
+                    <ul style="font-size: 1.1em; line-height: 2;">
+                        <li><strong>Textes bibliques:</strong> Traductions domaine public (Segond 1910) + paraphrases IA originales</li>
+                        <li><strong>Musiques:</strong> Générées par Suno AI sous licence Pro, propriété de l'Association</li>
+                        <li><strong>Marque "Bible Chantée":</strong> Enregistrement INPI France + international en cours</li>
+                        <li><strong>Licence Creative Commons:</strong> CC BY-NC 4.0 (usage non commercial libre, commercial payant)</li>
+                        <li><strong>Protection logiciels:</strong> Scripts Python sous licence MIT, architecture propriétaire</li>
+                    </ul>
+                </div>
+
+                <h3>🛡️ Gestion des Risques</h3>
+                <table class="table-pro">
+                    <thead>
+                        <tr>
+                            <th>Risque</th>
+                            <th>Impact</th>
+                            <th>Probabilité</th>
+                            <th>Mitigation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Droits traductions bibliques</td>
+                            <td><span class="risk-high">Élevé</span></td>
+                            <td><span class="risk-low">Faible</span></td>
+                            <td>Traductions domaine public + paraphrases IA</td>
+                        </tr>
+                        <tr>
+                            <td>Licence Suno AI usage commercial</td>
+                            <td><span class="risk-medium">Moyen</span></td>
+                            <td><span class="risk-low">Faible</span></td>
+                            <td>Licence Pro acquise, ToS validés</td>
+                        </tr>
+                        <tr>
+                            <td>Marque déjà déposée</td>
+                            <td><span class="risk-low">Faible</span></td>
+                            <td><span class="risk-low">Faible</span></td>
+                            <td>Recherche INPI effectuée, noms alternatifs prêts</td>
+                        </tr>
+                        <tr>
+                            <td>Conformité RGPD</td>
+                            <td><span class="risk-high">Élevé</span></td>
+                            <td><span class="risk-low">Faible</span></td>
+                            <td>Registre complet, DPO désigné, procédures claires</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- MISSIONS -->
+            <section id="missions" class="section-global">
+                <h2><span>❤️</span> Engagement Missionnaire</h2>
+
+                <div class="info-box">
+                    <h3 style="color: #f093fb; border: none; padding: 0; margin: 0 0 20px 0;">10% des bénéfices reversés aux œuvres missionnaires</h3>
+                    <p style="font-size: 1.2em; line-height: 1.9;">
+                        Engagement <strong>contractuel et transparent</strong> : 10% des bénéfices nets de la Sàrl sont reversés
+                        annuellement à des organisations missionnaires reconnues. <strong>Mission avant profit</strong> : l'impact
+                        spirituel guide toutes nos décisions stratégiques.
+                    </p>
+                </div>
+
+                <div style="text-align: center; padding: 60px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 20px; color: white; margin: 40px 0;">
+                    <div style="font-size: 6em; font-weight: 700; margin-bottom: 20px;">10%</div>
+                    <p style="font-size: 2em; font-weight: 600; margin-bottom: 30px;">des bénéfices nets</p>
+                    <p style="font-size: 1.3em; line-height: 1.8; max-width: 800px; margin: 0 auto;">
+                        Reversés annuellement aux œuvres missionnaires dans le monde entier.
+                        <strong>Engagement contractuel, rapport public annuel, transparence totale.</strong>
+                    </p>
+                </div>
+
+                <h3>🌍 Partenaires Missionnaires (En Discussion)</h3>
+                <div class="grid-2">
+                    <div class="card-pro">
+                        <h4>🙏 Organisations Ciblées</h4>
+                        <ul style="line-height: 1.8;">
+                            <li>Mission Évangélique Mondiale</li>
+                            <li>Portes Ouvertes (Églises persécutées)</li>
+                            <li>Jeunesse en Mission (YWAM)</li>
+                            <li>Campus pour Christ</li>
+                            <li>SIM International</li>
+                        </ul>
+                    </div>
+                    <div class="card-pro">
+                        <h4>🎯 Critères de Sélection</h4>
+                        <ul style="line-height: 1.8;">
+                            <li>Reconnaissance internationale</li>
+                            <li>Transparence financière</li>
+                            <li>Impact mesurable</li>
+                            <li>Alignement doctrinal</li>
+                            <li>Présence terrain mondiale</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>📊 Projections Reversements Missionnaires</h3>
+                <table class="table-pro">
+                    <thead>
+                        <tr>
+                            <th>Année</th>
+                            <th>Bénéfice Net</th>
+                            <th>Reversement 10%</th>
+                            <th>Impact Estimé</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>2025</strong></td>
+                            <td>-€280</td>
+                            <td>€0</td>
+                            <td>Phase investissement</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2026</strong></td>
+                            <td>+€645K</td>
+                            <td style="color: #388e3c; font-weight: 700;">€64,500</td>
+                            <td>~100 missionnaires soutenus 1 mois</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2027</strong></td>
+                            <td>+€1,395K</td>
+                            <td style="color: #388e3c; font-weight: 700;">€139,500</td>
+                            <td>~200 missionnaires soutenus 1 mois</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2028</strong></td>
+                            <td>~€2,500K</td>
+                            <td style="color: #388e3c; font-weight: 700;">€250,000</td>
+                            <td>~400 missionnaires soutenus 1 mois</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2029</strong></td>
+                            <td>~€4,500K</td>
+                            <td style="color: #388e3c; font-weight: 700;">€450,000</td>
+                            <td>~700 missionnaires soutenus 1 mois</td>
+                        </tr>
+                        <tr style="background: rgba(240, 147, 251, 0.1); font-weight: 700;">
+                            <td colspan="2"><strong>TOTAL 5 ANS</strong></td>
+                            <td style="color: #388e3c;">~€904,000</td>
+                            <td>Impact mondial significatif</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>✅ Garanties de Transparence</h3>
+                <div class="info-box">
+                    <ul style="font-size: 1.1em; line-height: 2;">
+                        <li><strong>Clause contractuelle:</strong> Obligation statutaire dans les statuts de l'Association</li>
+                        <li><strong>Rapport annuel public:</strong> Montants versés, organisations bénéficiaires, impact détaillé</li>
+                        <li><strong>Audit indépendant:</strong> Vérification par cabinet comptable externe</li>
+                        <li><strong>Communication transparente:</strong> Publication sur le site web et réseaux sociaux</li>
+                        <li><strong>Traçabilité complète:</strong> Chaque versement documenté et justifié</li>
+                    </ul>
+                </div>
+
+                <div style="background: white; padding: 40px; border-radius: 15px; border: 3px solid #f093fb; margin: 40px 0; text-align: center;">
+                    <h3 style="color: #f093fb; font-size: 2em; margin-bottom: 20px;">Notre Engagement</h3>
+                    <p style="font-size: 1.3em; line-height: 1.9; max-width: 900px; margin: 0 auto;">
+                        "Bible Chantée n'est pas un projet commercial qui soutient les missions. <strong>C'est une mission
+                        qui utilise le commerce pour se financer.</strong> La diffusion de la Parole de Dieu est notre priorité absolue.
+                        Le profit est un moyen, jamais une fin."
+                    </p>
+                    <p style="margin-top: 30px; font-weight: 700; color: #f093fb; font-size: 1.2em;">
+                        — Stéphane Cassani, Fondateur
+                    </p>
+                </div>
+            </section>
+
+            <!-- CTA Final -->
+            <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 80px 50px; border-radius: 20px; text-align: center; color: white; margin: 60px 0;">
+                <h2 style="color: white; font-size: 3em; margin-bottom: 30px;">Rejoignez l'Aventure</h2>
+                <p style="font-size: 1.4em; opacity: 0.95; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    Un projet unique qui combine innovation technologique, impact spirituel mondial, et modèle économique durable.
+                    <strong>Investissez dans une mission qui change des vies.</strong>
+                </p>
+                <div style="margin-top: 40px;">
+                    <a href="annexe-technique-investisseurs.html" style="display: inline-block; background: white; color: #f093fb; padding: 20px 50px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.2em; margin: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                        ⚙️ Annexe Technique
+                    </a>
+                    <a href="mailto:contact@biblechantee.com" style="display: inline-block; background: rgba(255,255,255,0.2); color: white; padding: 20px 50px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.2em; margin: 10px; border: 2px solid white;">
+                        📧 Nous Contacter
+                    </a>
+                </div>
+                <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.3);">
+                    <p style="opacity: 0.9; font-size: 1.1em;">
+                        Association Bible Chantée • Suisse<br>
+                        <a href="mailto:contact@biblechantee.com" style="color: white; text-decoration: underline;">contact@biblechantee.com</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Retour -->
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="book-investisseurs.html" style="display: inline-block; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: 700; margin-right: 15px;">
+                    ← Version Résumée
+                </a>
+                <a href="financier.html" style="display: inline-block; background: white; color: #f093fb; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: 700; border: 2px solid #f093fb;">
+                    Retour Documents Financiers
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Bible Chantée - Tous droits réservés</p>
+            <p>Contact: <a href="mailto:scassani1964@gmail.com">scassani1964@gmail.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Edition - Bible Chantée</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero-investor {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-investor::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+        }
+        .hero-investor h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .hero-investor .subtitle {
+            font-size: 1.5em;
+            opacity: 0.95;
+            font-weight: 600;
+            position: relative;
+        }
+        .executive-card {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            margin: 40px auto;
+            max-width: 1200px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .kpi-box {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(240, 147, 251, 0.3);
+        }
+        .kpi-value {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .kpi-label {
+            font-size: 1.1em;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+        .section-investor {
+            background: white;
+            padding: 50px;
+            margin: 30px 0;
+            border-radius: 20px;
+            border-left: 6px solid #f093fb;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        .section-investor h2 {
+            color: #f093fb;
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .section-investor .icon {
+            font-size: 1.3em;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(240, 147, 251, 0.1) 0%, rgba(245, 87, 108, 0.1) 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border-left: 5px solid #f093fb;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        .feature-item {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid #f0f0f0;
+            transition: all 0.3s ease;
+        }
+        .feature-item:hover {
+            border-color: #f093fb;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(240, 147, 251, 0.2);
+        }
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        .cta-investor {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 50px 0;
+        }
+        .cta-investor h2 {
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #f093fb;
+            padding: 20px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2em;
+            margin: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        .growth-timeline {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(240, 147, 251, 0.05) 0%, rgba(245, 87, 108, 0.05) 100%);
+            border-radius: 15px;
+        }
+        .timeline-item {
+            text-align: center;
+            flex: 1;
+        }
+        .timeline-year {
+            font-size: 2em;
+            font-weight: 700;
+            color: #f093fb;
+            margin-bottom: 10px;
+        }
+        .timeline-value {
+            font-size: 1.5em;
+            font-weight: 600;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">📖 BIBLE CHANTÉE</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="technique.html">Technique</a></li>
+                <li><a href="commercial.html">Commercial</a></li>
+                <li><a href="financier.html" class="active">Financier</a></li>
+                <li><a href="juridique.html">Juridique</a></li>
+                <li><a href="planification.html">Planification</a></li>
+                <li><a href="ressources.html">Ressources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero-investor">
+        <div class="container">
+            <h1>💎 INVESTOR EDITION</h1>
+            <p class="subtitle">Global Faith & Tech Project</p>
+            <p style="font-size: 1.2em; margin-top: 20px; opacity: 0.9;">La première Bible complète en musique worship moderne</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container" style="padding: 50px 20px;">
+
+            <!-- KPIs Clés -->
+            <div class="kpi-grid">
+                <div class="kpi-box">
+                    <div class="kpi-value">2.5B</div>
+                    <div class="kpi-label">Chrétiens Mondiaux</div>
+                </div>
+                <div class="kpi-box">
+                    <div class="kpi-value">14,268</div>
+                    <div class="kpi-label">Chansons (12 langues)</div>
+                </div>
+                <div class="kpi-box">
+                    <div class="kpi-value">×5</div>
+                    <div class="kpi-label">Croissance 3 ans</div>
+                </div>
+                <div class="kpi-box">
+                    <div class="kpi-value">100%</div>
+                    <div class="kpi-label">Gratuit Églises</div>
+                </div>
+            </div>
+
+            <!-- Résumé Business -->
+            <div class="section-investor">
+                <h2><span class="icon">🎯</span> Résumé Business</h2>
+                <div class="highlight-box">
+                    <p style="font-size: 1.2em; line-height: 1.8; margin-bottom: 0;">
+                        <strong>Projet mondial structuré</strong> combinant innovation technologique (IA musicale) et mission spirituelle.
+                        Diffusion gratuite de la Bible entière en format musical worship dans 12 langues, avec monétisation via
+                        app low-cost (0.99 CHF), licences B2B, et dons. Modèle scalable avec coût marginal quasi nul.
+                    </p>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Innovation Unique</h3>
+                        <p>Première Bible complète en musique worship moderne (1,189 chapitres)</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🤖</div>
+                        <h3>IA de Pointe</h3>
+                        <p>Suno AI V4_5ALL pour qualité professionnelle automatisée</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🌍</div>
+                        <h3>Global</h3>
+                        <p>12 langues couvrant 80% des chrétiens mondiaux</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">💰</div>
+                        <h3>Low-Cost</h3>
+                        <p>Investissement initial: 300 CHF, ROI: 7,000% sur 3 ans</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marché -->
+            <div class="section-investor">
+                <h2><span class="icon">📊</span> Marché</h2>
+                <p style="font-size: 1.1em; margin-bottom: 25px;">
+                    <strong>Public chrétien mondial</strong> avec segments prioritaires bien définis et marché total adressable de 2.5 milliards.
+                </p>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h3 style="color: #f093fb;">🏛️ Églises (25M)</h3>
+                        <p>Églises évangéliques, charismatiques, groupes jeunes, écoles du dimanche</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 style="color: #f093fb;">🎥 Créateurs (500K)</h3>
+                        <p>YouTubers, podcasters, influenceurs, blogueurs chrétiens</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 style="color: #f093fb;">🙏 Individuels (50M)</h3>
+                        <p>Personnes en quête spirituelle, lecteurs Bible, auditeurs worship</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 style="color: #f093fb;">🌐 International (2.5B)</h3>
+                        <p>Expansion 12 langues: EN, ES, PT, DE, IT, PL, RO, RU, ZH, JA, KO</p>
+                    </div>
+                </div>
+                <div class="highlight-box">
+                    <h3 style="color: #f093fb; margin-bottom: 15px;">✅ Avantage Concurrentiel Unique</h3>
+                    <p style="font-size: 1.1em; margin-bottom: 0;">
+                        <strong>Aucun concurrent direct.</strong> Les alternatives (Spotify worship, YouVersion, audiobooks)
+                        offrent soit des chansons isolées, soit de la narration simple. Bible Chantée est la première
+                        et seule Bible complète en format musical worship moderne, couvrant les 1,189 chapitres.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Produits -->
+            <div class="section-investor">
+                <h2><span class="icon">📱</span> Produits & Services</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">📱</div>
+                        <h3>Application Mobile</h3>
+                        <p><strong>0.99 CHF</strong> - iOS/Android avec téléchargement offline, notifications, playlists</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🏛️</div>
+                        <h3>Packs Églises</h3>
+                        <p><strong>Gratuit</strong> - USB complet, projection lyrics, support technique</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📜</div>
+                        <h3>Licences B2B</h3>
+                        <p><strong>50-200€/an</strong> - Églises, radios, organisations pour usage commercial</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🌐</div>
+                        <h3>Diffusion Web</h3>
+                        <p><strong>100% Gratuit</strong> - Streaming illimité via Archive.org et site web</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Revenus -->
+            <div class="section-investor">
+                <h2><span class="icon">💰</span> Modèle de Revenus</h2>
+                <div class="highlight-box">
+                    <h3 style="color: #f093fb; margin-bottom: 20px;">Revenus Multiples & Récurrents</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                        <div>
+                            <div style="font-size: 2em; font-weight: 700; color: #f093fb;">€420K/an</div>
+                            <div style="opacity: 0.8;">Dons & Crowdfunding</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 2em; font-weight: 700; color: #f093fb;">€150K/an</div>
+                            <div style="opacity: 0.8;">Licences B2B</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 2em; font-weight: 700; color: #f093fb;">€125K/an</div>
+                            <div style="opacity: 0.8;">Produits Dérivés</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 2em; font-weight: 700; color: #f093fb;">€720K/an</div>
+                            <div style="opacity: 0.8;">Premium (Phase 3)</div>
+                        </div>
+                    </div>
+                </div>
+                <p style="font-size: 1.1em; margin-top: 25px;">
+                    <strong>Micro-paiement 0.99 CHF</strong> pour l'app mobile, complété par des revenus B2B (licences églises/radios),
+                    dons récurrents (Patreon), et produits dérivés. Modèle freemium avec services premium à partir de la Phase 3.
+                </p>
+            </div>
+
+            <!-- Croissance -->
+            <div class="section-investor">
+                <h2><span class="icon">📈</span> Trajectoire de Croissance</h2>
+                <div class="highlight-box">
+                    <h3 style="color: #f093fb; margin-bottom: 20px;">Projection 3 Ans</h3>
+                    <div class="growth-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2025</div>
+                            <div class="timeline-value">Lancement</div>
+                            <p style="margin-top: 10px; color: #666;">FR complet</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2026</div>
+                            <div class="timeline-value">€695K</div>
+                            <p style="margin-top: 10px; color: #666;">12 langues</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2027</div>
+                            <div class="timeline-value">€1.5M</div>
+                            <p style="margin-top: 10px; color: #666;">1M users</p>
+                        </div>
+                    </div>
+                </div>
+                <p style="font-size: 1.1em;">
+                    <strong>Utilisateurs ×5 sur 3 ans</strong> avec expansion progressive : Phase 1 (lancement gratuit FR),
+                    Phase 2 (monétisation + 12 langues), Phase 3 (premium + app mobile). KPIs: 100K visiteurs/mois à 6 mois,
+                    1M utilisateurs actifs à 3 ans.
+                </p>
+            </div>
+
+            <!-- Structure -->
+            <div class="section-investor">
+                <h2><span class="icon">🏢</span> Structure Juridique</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h3 style="color: #f093fb;">🏛️ Association</h3>
+                        <p><strong>Propriétaire IP</strong><br>Détient les droits d'auteur, marques, contenus. Structure à but non lucratif.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 style="color: #f093fb;">💼 Sàrl</h3>
+                        <p><strong>Exploitante</strong><br>Commercialisation, licences, développement. Structure commerciale agile.</p>
+                    </div>
+                </div>
+                <div class="highlight-box" style="margin-top: 25px;">
+                    <p style="font-size: 1.1em; margin-bottom: 0;">
+                        Modèle hybride sécurisé : <strong>Association propriétaire</strong> protège la mission et l'IP,
+                        <strong>Sàrl exploitante</strong> assure la croissance commerciale. Conformité RGPD, CGU, licences églises.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Engagement Éthique -->
+            <div class="section-investor">
+                <h2><span class="icon">❤️</span> Engagement Éthique</h2>
+                <div class="highlight-box">
+                    <div style="text-align: center; padding: 20px;">
+                        <div style="font-size: 4em; font-weight: 700; color: #f093fb; margin-bottom: 15px;">10%</div>
+                        <p style="font-size: 1.3em; font-weight: 600; margin-bottom: 20px;">
+                            des bénéfices nets reversés aux œuvres missionnaires
+                        </p>
+                        <p style="font-size: 1.1em; line-height: 1.8; max-width: 800px; margin: 0 auto;">
+                            Engagement contractuel transparent. Partenariats avec organisations missionnaires reconnues.
+                            Rapport annuel public. <strong>Mission avant profit</strong> : l'impact spirituel guide toutes nos décisions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-investor">
+                <h2>Découvrir le Business Plan Complet</h2>
+                <p style="font-size: 1.2em; opacity: 0.95; margin-bottom: 30px;">
+                    Vision détaillée, projections financières, roadmap technique, analyse risques
+                </p>
+                <a href="book-investisseurs-global.html" class="cta-button">📊 Book Investisseurs Global</a>
+                <a href="annexe-technique-investisseurs.html" class="cta-button">⚙️ Annexe Technique</a>
+                <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.3);">
+                    <p style="opacity: 0.9;">Contact: <a href="mailto:contact@biblechantee.com" style="color: white; text-decoration: underline;">contact@biblechantee.com</a></p>
+                </div>
+            </div>
+
+            <!-- Retour -->
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="financier.html" style="display: inline-block; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: 700;">
+                    ← Retour aux documents financiers
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Bible Chantée - Tous droits réservés</p>
+            <p>Contact: <a href="mailto:scassani1964@gmail.com">scassani1964@gmail.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>
