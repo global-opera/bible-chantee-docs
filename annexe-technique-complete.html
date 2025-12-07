@@ -88,28 +88,114 @@
         </div>
     </header>
 
-    <div class="pdf-viewer-container">
-        <div class="pdf-header">
-            <h2>📄 Document Technique Complet</h2>
-            <p>
-                Ce document présente l'architecture technique complète du projet Bible Chantée,
-                incluant les systèmes de génération IA, l'infrastructure cloud, les APIs,
-                et les intégrations avec les plateformes de streaming.
-            </p>
-            <a href="Annexe_Technique_Bible_Chantee_COMPLETE.pdf" class="download-btn" download>
-                📥 Télécharger le PDF
-            </a>
-        </div>
+    <main>
+        <div class="container">
+            <section class="content-section">
+                <h2>🏗️ Infrastructure Technique Complète</h2>
+                <p>Cette annexe décrit l'infrastructure complète de production du projet Bible Chantée.</p>
+            </section>
 
-        <object
-            data="Annexe_Technique_Bible_Chantee_COMPLETE.pdf"
-            type="application/pdf"
-            class="pdf-embed">
-            <p>Votre navigateur ne supporte pas l'affichage de PDF intégré.
-               <a href="Annexe_Technique_Bible_Chantee_COMPLETE.pdf" class="download-btn">Télécharger le PDF</a>
-            </p>
-        </object>
-    </div>
+            <section class="content-section">
+                <h3>📖 Sources Bibliques</h3>
+                <ul>
+                    <li><strong>Français:</strong> Segond 1910 (domaine public)</li>
+                    <li><strong>Anglais:</strong> King James Version (KJV)</li>
+                    <li><strong>Portugais:</strong> Almeida Corrigida Fiel (ACF)</li>
+                    <li><strong>Espagnol:</strong> Reina-Valera 1909</li>
+                </ul>
+                <p><em>Toutes les sources sont open-source et dans le domaine public.</em></p>
+            </section>
+
+            <section class="content-section">
+                <h3>🔧 Pipeline de Production</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>1️⃣ Découpage par Livres</h4>
+                        <p>Script: <code>split_bible_by_book.py</code></p>
+                        <p>Séparation automatique de la Bible en 66 livres individuels</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>2️⃣ Génération Lyrics FR</h4>
+                        <p>Script: <code>generate_lyrics_fr.py</code></p>
+                        <p>Création des paroles françaises en format standard long</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>3️⃣ Pipeline Multilingue</h4>
+                        <p>Script: <code>bible_pipeline_all.py</code></p>
+                        <p>Automatisation complète pour les 11 langues</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>4️⃣ Production Musicale</h4>
+                        <p>Intégration avec scripts Suno officiels</p>
+                        <p>Génération AI de musique worship professionnelle</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>💾 Export et Archivage</h3>
+                <ul>
+                    <li><strong>Format:</strong> MP3 haute qualité (320 kbps)</li>
+                    <li><strong>Stockage:</strong> Cloud storage avec CDN mondial</li>
+                    <li><strong>Backup:</strong> Système de sauvegarde redondant</li>
+                    <li><strong>Archivage:</strong> Organisation par livre et chapitre</li>
+                </ul>
+            </section>
+
+            <section class="content-section">
+                <h3>📁 Arborescence Standardisée</h3>
+                <pre style="background: #f5f5f5; padding: 20px; border-radius: 10px; overflow-x: auto;">
+Bible-Chantee/
+├── Lyrics/
+│   ├── FR/
+│   ├── EN/
+│   ├── ES/
+│   └── PT/
+├── Suno_Output/
+│   ├── FR/
+│   │   ├── 01_GEN/
+│   │   ├── 02_EXO/
+│   │   └── ...
+├── Timestamps/
+│   └── FR/
+├── HTML_Sync/
+│   └── FR/
+└── Scripts/
+    ├── split_bible_by_book.py
+    ├── generate_lyrics_fr.py
+    └── bible_pipeline_all.py
+                </pre>
+            </section>
+
+            <section class="content-section">
+                <h3>⚖️ Droits et Licences</h3>
+                <div style="background: #fff8dc; padding: 20px; border-radius: 10px; border-left: 5px solid #ffce00;">
+                    <p><strong>Textes bibliques:</strong> Domaine public</p>
+                    <p><strong>Paroles adaptées:</strong> © 2025 Bible Chantée</p>
+                    <p><strong>Musique générée:</strong> © 2025 Bible Chantée (via Suno AI)</p>
+                    <p><strong>Licences:</strong> CC BY-NC 4.0 (usage non-commercial gratuit)</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>🌍 Infrastructure Scalable Mondiale</h3>
+                <ul>
+                    <li>✅ <strong>CDN Global:</strong> Distribution rapide partout dans le monde</li>
+                    <li>✅ <strong>API REST:</strong> Accès programmatique aux contenus</li>
+                    <li>✅ <strong>Streaming:</strong> Intégration Spotify, Apple Music, YouTube</li>
+                    <li>✅ <strong>Apps mobiles:</strong> iOS et Android (en développement)</li>
+                    <li>✅ <strong>Monitoring:</strong> Surveillance 24/7 de la disponibilité</li>
+                </ul>
+            </section>
+
+            <section class="content-section">
+                <h3>🔗 Liens Techniques</h3>
+                <p><strong>Site web:</strong> <a href="https://biblechantee.netlify.app" target="_blank">biblechantee.netlify.app</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/global-opera/bible-chantee" target="_blank">github.com/global-opera/bible-chantee</a></p>
+                <p><strong>Documentation:</strong> <a href="https://biblechantee-docs.netlify.app" target="_blank">biblechantee-docs.netlify.app</a></p>
+            </section>
+        </div>
+    </main>
 
     <footer class="footer">
         <div class="container">
