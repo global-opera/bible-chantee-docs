@@ -3,245 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bible Chantée - Documentation Complète</title>
+    <title>Bible Chantee - Documentation</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: #0f172a; color: #e5e7eb; }
+        
+        .navbar { background: #1e3a8a; padding: 15px 0; position: sticky; top: 0; z-index: 100; }
+        .navbar .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .navbar .logo { font-size: 1.5em; font-weight: bold; color: white; }
+        .nav-menu { list-style: none; display: flex; gap: 25px; }
+        .nav-menu a { color: white; text-decoration: none; opacity: 0.9; }
+        .nav-menu a:hover { opacity: 1; }
+        
+        .hero { background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%); padding: 80px 20px; text-align: center; }
+        .hero h1 { font-size: 3em; margin-bottom: 20px; }
+        .hero p { font-size: 1.3em; max-width: 700px; margin: 0 auto 30px; opacity: 0.95; }
+        
+        .stats { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin: 40px 0; }
+        .stat { background: rgba(255,255,255,0.15); padding: 20px 35px; border-radius: 12px; }
+        .stat-num { font-size: 2.5em; font-weight: bold; }
+        .stat-label { opacity: 0.9; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        section { padding: 60px 20px; }
+        section h2 { font-size: 2em; margin-bottom: 30px; text-align: center; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        
+        .card { background: #1e293b; border-radius: 12px; padding: 30px; transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: #60a5fa; margin-bottom: 15px; font-size: 1.3em; }
+        .card p { opacity: 0.8; margin-bottom: 20px; line-height: 1.6; }
+        .card a { display: inline-block; background: #2563eb; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; }
+        .card a:hover { background: #1d4ed8; }
+        
+        .docs-list { list-style: none; }
+        .docs-list li { padding: 12px 0; border-bottom: 1px solid #334155; }
+        .docs-list a { color: #60a5fa; text-decoration: none; }
+        .docs-list a:hover { text-decoration: underline; }
+        
+        .btn-primary { display: inline-block; background: white; color: #1e3a8a; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; margin: 10px; }
+        .btn-secondary { display: inline-block; background: transparent; color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; margin: 10px; border: 2px solid white; }
+        
+        footer { background: #0f172a; padding: 40px 20px; text-align: center; border-top: 1px solid #1e293b; }
+        footer a { color: #60a5fa; }
+    </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
-            <div class="logo">📖 BIBLE CHANTÉE</div>
+            <div class="logo">BIBLE CHANTEE</div>
             <ul class="nav-menu">
-                <li><a href="index.html" class="active">Accueil</a></li>
-                <li><a href="technique.html">Technique</a></li>
-                <li><a href="commercial.html">Commercial</a></li>
-                <li><a href="financier.html">Financier</a></li>
-                <li><a href="juridique.html">Juridique</a></li>
-                <li><a href="planification.html">Planification</a></li>
-                <li><a href="ressources.html">Ressources</a></li>
+                <li><a href="https://global-opera.github.io/bible-chantee/">Site Principal</a></li>
+                <li><a href="business-plan.html">Business Plan</a></li>
+                <li><a href="dashboard-financier.html">Finances</a></li>
+                <li><a href="gantt-visual.html">Planning</a></li>
             </ul>
         </div>
     </nav>
 
-    <header class="hero" style="background: #000080; position: relative; overflow: hidden;">
-        <!-- Animated Background -->
-        <div style="position: absolute; width: 100%; height: 100%; opacity: 0.1;">
-            <div style="position: absolute; top: 20%; left: 10%; width: 300px; height: 300px; background: white; border-radius: 50%; filter: blur(100px); animation: float 6s ease-in-out infinite;"></div>
-            <div style="position: absolute; top: 60%; right: 15%; width: 400px; height: 400px; background: white; border-radius: 50%; filter: blur(120px); animation: float 8s ease-in-out infinite reverse;"></div>
+    <header class="hero">
+        <h1>Documentation Bible Chantee</h1>
+        <p>Toute la documentation du projet : business plan, finances, planning, documents juridiques et ressources.</p>
+        
+        <div class="stats">
+            <div class="stat"><div class="stat-num">1,189</div><div class="stat-label">Chapitres</div></div>
+            <div class="stat"><div class="stat-num">12</div><div class="stat-label">Langues</div></div>
+            <div class="stat"><div class="stat-num">66</div><div class="stat-label">Livres</div></div>
         </div>
-
-        <div class="container" style="position: relative; z-index: 1; padding: 80px 20px;">
-            <div style="text-align: center; color: white;">
-                <div style="display: inline-block; background: rgba(255,255,255,0.2); padding: 10px 25px; border-radius: 50px; margin-bottom: 30px; backdrop-filter: blur(10px);">
-                    <span style="font-size: 0.9em; font-weight: 600; letter-spacing: 2px;">🎵 INNOVATION MONDIALE</span>
-                </div>
-                <h1 style="font-size: 4em; margin: 20px 0; text-shadow: 0 4px 20px rgba(0,0,0,0.3); animation: fadeInUp 1s ease;">📖 BIBLE CHANTÉE</h1>
-                <p class="subtitle" style="font-size: 1.8em; opacity: 0.95; margin-bottom: 30px; animation: fadeInUp 1.2s ease;">La première Bible complète en musique worship moderne</p>
-                <div class="hero-description" style="max-width: 800px; margin: 0 auto;">
-                    <p style="font-size: 1.3em; line-height: 1.8; margin-bottom: 20px; animation: fadeInUp 1.4s ease;">Transformez votre lecture biblique en expérience musicale avec 1,189 chapitres entièrement chantés, générés par intelligence artificielle de pointe</p>
-                    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin: 40px 0; animation: fadeInUp 1.6s ease;">
-                        <div style="background: rgba(255,255,255,0.25); padding: 15px 30px; border-radius: 12px; backdrop-filter: blur(10px);">
-                            <div style="font-size: 2em; font-weight: 700;">14,268</div>
-                            <div style="opacity: 0.9;">Chansons IA</div>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.25); padding: 15px 30px; border-radius: 12px; backdrop-filter: blur(10px);">
-                            <div style="font-size: 2em; font-weight: 700;">1,189</div>
-                            <div style="opacity: 0.9;">Chapitres</div>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.25); padding: 15px 30px; border-radius: 12px; backdrop-filter: blur(10px);">
-                            <div style="font-size: 2em; font-weight: 700;">66</div>
-                            <div style="opacity: 0.9;">Livres bibliques</div>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.25); padding: 15px 30px; border-radius: 12px; backdrop-filter: blur(10px);">
-                            <div style="font-size: 2em; font-weight: 700;">12</div>
-                            <div style="opacity: 0.9;">Langues</div>
-                        </div>
-                    </div>
-                    <div style="margin-top: 40px; animation: fadeInUp 1.8s ease;">
-                        <a href="business-plan.html" target="_blank" style="display: inline-block; background: white; color: #000080; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.2em; margin: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: transform 0.3s, box-shadow 0.3s;">
-                            📊 Business Plan
-                        </a>
-                        <a href="dashboard-financier.html" style="display: inline-block; background: rgba(255,255,255,0.2); color: white; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.2em; margin: 10px; border: 2px solid white; backdrop-filter: blur(10px); transition: transform 0.3s, background 0.3s;">
-                            💰 Dashboard Financier
-                        </a>
-                    </div>
-                </div>
-            </div>
+        
+        <div>
+            <a href="business-plan.html" class="btn-primary">Business Plan</a>
+            <a href="dashboard-financier.html" class="btn-secondary">Dashboard Financier</a>
         </div>
-
-        <style>
-            @keyframes float {
-                0%, 100% { transform: translateY(0px); }
-                50% { transform: translateY(-30px); }
-            }
-            @keyframes fadeInUp {
-                from {
-                    opacity: 0;
-                    transform: translateY(30px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-            .hero a:hover {
-                transform: translateY(-5px);
-            }
-            .hero a:first-of-type:hover {
-                box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-            }
-            .hero a:last-of-type:hover {
-                background: rgba(255,255,255,0.3);
-            }
-        </style>
     </header>
 
-    <section class="metrics" style="background: #f8f9fa; padding: 60px 0;">
+    <section>
         <div class="container">
-            <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 20px; color: #333;">📊 État d'avancement en Temps Réel</h2>
-            <p style="text-align: center; color: #666; font-size: 1.2em; margin-bottom: 50px;">6 Décembre 2025 • Génération active 24/7</p>
-            <div class="metrics-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
-                <div class="metric-card success" style="background: #000080; padding: 35px; border-radius: 20px; text-align: center; color: white; box-shadow: 0 10px 30px rgba(67, 233, 123, 0.3); transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;">
-                    <div class="metric-icon" style="font-size: 3em; margin-bottom: 15px;">✅</div>
-                    <div class="metric-title" style="font-size: 1.1em; opacity: 0.9; margin-bottom: 10px;">Lyrics FR</div>
-                    <div class="metric-value" style="font-size: 3em; font-weight: 700; margin-bottom: 10px;">100%</div>
-                    <div class="metric-detail" style="opacity: 0.9;">1,189/1,189 chapitres</div>
-                    <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.3); font-size: 0.9em;">✨ Complet!</div>
+            <h2>Documents Principaux</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Business Plan</h3>
+                    <p>Strategie complete, analyse de marche, modele economique et projections financieres sur 3 ans.</p>
+                    <a href="business-plan.html">Voir le document</a>
                 </div>
-                <div class="metric-card progress" style="background: #000080; padding: 35px; border-radius: 20px; text-align: center; color: white; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3); transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;">
-                    <div class="metric-icon" style="font-size: 3em; margin-bottom: 15px;">🎵</div>
-                    <div class="metric-title" style="font-size: 1.1em; opacity: 0.9; margin-bottom: 10px;">MP3 FR</div>
-                    <div class="metric-value" style="font-size: 3em; font-weight: 700; margin-bottom: 10px;">41.2%</div>
-                    <div class="metric-detail" style="opacity: 0.9;">490/1,189 chapitres</div>
-                    <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.3);">
-                        <div style="background: rgba(255,255,255,0.2); border-radius: 10px; height: 8px; overflow: hidden;">
-                            <div style="background: white; height: 100%; width: 41.2%; transition: width 1s ease;"></div>
-                        </div>
-                    </div>
+                <div class="card">
+                    <h3>Dashboard Financier</h3>
+                    <p>Tableaux de bord interactifs avec previsions, scenarios et suivi des revenus.</p>
+                    <a href="dashboard-financier.html">Voir le dashboard</a>
                 </div>
-                <div class="metric-card pending" style="background: #000080; padding: 35px; border-radius: 20px; text-align: center; color: white; box-shadow: 0 10px 30px rgba(240, 147, 251, 0.3); transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;">
-                    <div class="metric-icon" style="font-size: 3em; margin-bottom: 15px;">🌍</div>
-                    <div class="metric-title" style="font-size: 1.1em; opacity: 0.9; margin-bottom: 10px;">Langues</div>
-                    <div class="metric-value" style="font-size: 3em; font-weight: 700; margin-bottom: 10px;">12</div>
-                    <div class="metric-detail" style="opacity: 0.9;">En préparation</div>
-                    <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.3); font-size: 0.9em;">🚀 Bientôt disponible</div>
+                <div class="card">
+                    <h3>Planning Gantt</h3>
+                    <p>Diagramme de Gantt visuel avec toutes les phases du projet et jalons.</p>
+                    <a href="gantt-visual.html">Voir le planning</a>
                 </div>
-                <div class="metric-card info" style="background: #000080; padding: 35px; border-radius: 20px; text-align: center; color: white; box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3); transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;">
-                    <div class="metric-icon" style="font-size: 3em; margin-bottom: 15px;">🤖</div>
-                    <div class="metric-title" style="font-size: 1.1em; opacity: 0.9; margin-bottom: 10px;">Génération IA</div>
-                    <div class="metric-value" style="font-size: 2.5em; font-weight: 700; margin-bottom: 10px;">ACTIF</div>
-                    <div class="metric-detail" style="opacity: 0.9;">2 watchdogs • 2 processus</div>
-                    <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.3); font-size: 0.9em;">
-                        <span style="display: inline-block; width: 8px; height: 8px; background: #43e97b; border-radius: 50%; margin-right: 8px; animation: pulse 2s ease infinite;"></span>
-                        En ligne 24/7
-                    </div>
+                <div class="card">
+                    <h3>Book Investisseurs</h3>
+                    <p>Presentation complete pour investisseurs avec vision, metriques et opportunites.</p>
+                    <a href="book-investisseurs-global.html">Voir le book</a>
                 </div>
-            </div>
-        </div>
-        <style>
-            .metric-card:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-            }
-            @keyframes pulse {
-                0%, 100% { opacity: 1; transform: scale(1); }
-                50% { opacity: 0.5; transform: scale(1.3); }
-            }
-        </style>
-    </section>
-
-    <!-- Business Plan Highlight -->
-    <section style="background: #000080; padding: 50px 0; margin-top: 40px;">
-        <div class="container" style="text-align: center; color: white;">
-            <h2 style="color: white; font-size: 2.5em; margin-bottom: 20px;">🚀 BUSINESS PLAN & ÉTUDE DE MARCHÉ</h2>
-            <p style="font-size: 1.2em; opacity: 0.95; max-width: 800px; margin: 0 auto 30px;">Plan stratégique complet avec analyse de marché, modèle économique et projections financières sur 3 ans • ROI: 7,000%</p>
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="business-plan.html" target="_blank" style="background: white; color: #000080; padding: 15px 35px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1em; display: inline-block;">📄 Lire le Business Plan (Markdown)</a>
-                <a href="gantt-visual.html" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white; padding: 15px 35px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1em; display: inline-block;">📊 Voir les Gantt Interactifs</a>
-            </div>
-            <div style="margin-top: 30px; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
-                <div>
-                    <div style="font-size: 2em; font-weight: 700;">€2M+</div>
-                    <div style="opacity: 0.9;">Revenus projetés 3 ans</div>
-                </div>
-                <div>
-                    <div style="font-size: 2em; font-weight: 700;">2.5B</div>
-                    <div style="opacity: 0.9;">Marché potentiel (chrétiens)</div>
-                </div>
-                <div>
-                    <div style="font-size: 2em; font-weight: 700;">12 langues</div>
-                    <div style="opacity: 0.9;">Expansion multilingue</div>
+                <div class="card">
+                    <h3>Book Officiel</h3>
+                    <p>Presentation officielle du projet Bible Chantee.</p>
+                    <a href="book-officiel.html">Voir le book</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="overview" style="padding: 80px 0; background: white;">
+    <section style="background: #1e293b;">
         <div class="container">
-            <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 20px; color: #333;">📚 Documentation Complète</h2>
-            <p style="text-align: center; color: #666; font-size: 1.2em; margin-bottom: 60px;">Explorez tous les aspects du projet Bible Chantée</p>
-            <div class="cards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
-                <a href="technique.html" class="doc-card" style="background: #000080 0%, rgba(118, 75, 162, 0.1) 100%); padding: 40px; border-radius: 20px; text-decoration: none; transition: all 0.3s; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 5px solid #000080; position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: -30px; right: -30px; font-size: 8em; opacity: 0.05;">💻</div>
-                    <div class="card-icon" style="font-size: 3.5em; margin-bottom: 20px; position: relative; z-index: 1;">💻</div>
-                    <h3 style="color: #000080; font-size: 1.5em; margin-bottom: 15px; position: relative; z-index: 1;">Documentation Technique</h3>
-                    <p style="color: #666; line-height: 1.6; margin-bottom: 20px; position: relative; z-index: 1;">Annexes techniques, architecture système et guide développeur complet</p>
-                    <span class="card-count" style="display: inline-block; background: #000080; color: white; padding: 8px 20px; border-radius: 20px; font-size: 0.9em; font-weight: 600; position: relative; z-index: 1;">4 documents</span>
-                </a>
-
-                <a href="commercial.html" class="doc-card" style="background: #000080 0%, rgba(245, 87, 108, 0.1) 100%); padding: 40px; border-radius: 20px; text-decoration: none; transition: all 0.3s; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 5px solid #f093fb; position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: -30px; right: -30px; font-size: 8em; opacity: 0.05;">💼</div>
-                    <div class="card-icon" style="font-size: 3.5em; margin-bottom: 20px; position: relative; z-index: 1;">💼</div>
-                    <h3 style="color: #f093fb; font-size: 1.5em; margin-bottom: 15px; position: relative; z-index: 1;">Documentation Commerciale</h3>
-                    <p style="color: #666; line-height: 1.6; margin-bottom: 20px; position: relative; z-index: 1;">Books officiels multilingues, packs églises et stratégie marketing</p>
-                    <span class="card-count" style="display: inline-block; background: #f093fb; color: white; padding: 8px 20px; border-radius: 20px; font-size: 0.9em; font-weight: 600; position: relative; z-index: 1;">24 documents + BP</span>
-                </a>
-
-                <a href="financier.html" class="doc-card" style="background: #000080 0%, rgba(56, 249, 215, 0.1) 100%); padding: 40px; border-radius: 20px; text-decoration: none; transition: all 0.3s; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 5px solid #43e97b; position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: -30px; right: -30px; font-size: 8em; opacity: 0.05;">💰</div>
-                    <div class="card-icon" style="font-size: 3.5em; margin-bottom: 20px; position: relative; z-index: 1;">💰</div>
-                    <h3 style="color: #43e97b; font-size: 1.5em; margin-bottom: 15px; position: relative; z-index: 1;">Documentation Financière</h3>
-                    <p style="color: #666; line-height: 1.6; margin-bottom: 20px; position: relative; z-index: 1;">Dashboard interactif, prévisionnels 3 ans et simulations de revenus</p>
-                    <span class="card-count" style="display: inline-block; background: #43e97b; color: white; padding: 8px 20px; border-radius: 20px; font-size: 0.9em; font-weight: 600; position: relative; z-index: 1;">Dashboard + 12 docs</span>
-                </a>
-
-                <a href="juridique.html" class="doc-card" style="background: #000080 0%, rgba(0, 242, 254, 0.1) 100%); padding: 40px; border-radius: 20px; text-decoration: none; transition: all 0.3s; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 5px solid #4facfe; position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: -30px; right: -30px; font-size: 8em; opacity: 0.05;">⚖️</div>
-                    <div class="card-icon" style="font-size: 3.5em; margin-bottom: 20px; position: relative; z-index: 1;">⚖️</div>
-                    <h3 style="color: #4facfe; font-size: 1.5em; margin-bottom: 15px; position: relative; z-index: 1;">Documentation Juridique</h3>
-                    <p style="color: #666; line-height: 1.6; margin-bottom: 20px; position: relative; z-index: 1;">Licences Creative Commons, CGU, RGPD et documents légaux</p>
-                    <span class="card-count" style="display: inline-block; background: #4facfe; color: white; padding: 8px 20px; border-radius: 20px; font-size: 0.9em; font-weight: 600; position: relative; z-index: 1;">13 documents</span>
-                </a>
-
-                <a href="planification.html" class="doc-card" style="background: #000080 0%, rgba(255, 99, 132, 0.1) 100%); padding: 40px; border-radius: 20px; text-decoration: none; transition: all 0.3s; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 5px solid #ff9f40; position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: -30px; right: -30px; font-size: 8em; opacity: 0.05;">📊</div>
-                    <div class="card-icon" style="font-size: 3.5em; margin-bottom: 20px; position: relative; z-index: 1;">📊</div>
-                    <h3 style="color: #ff9f40; font-size: 1.5em; margin-bottom: 15px; position: relative; z-index: 1;">Planification</h3>
-                    <p style="color: #666; line-height: 1.6; margin-bottom: 20px; position: relative; z-index: 1;">Gantt interactifs professionnels et registre de traitement RGPD</p>
-                    <span class="card-count" style="display: inline-block; background: #ff9f40; color: white; padding: 8px 20px; border-radius: 20px; font-size: 0.9em; font-weight: 600; position: relative; z-index: 1;">Gantt + 5 docs</span>
-                </a>
-
-                <a href="ressources.html" class="doc-card" style="background: #000080 0%, rgba(102, 126, 234, 0.1) 100%); padding: 40px; border-radius: 20px; text-decoration: none; transition: all 0.3s; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 5px solid #9966ff; position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: -30px; right: -30px; font-size: 8em; opacity: 0.05;">🌍</div>
-                    <div class="card-icon" style="font-size: 3.5em; margin-bottom: 20px; position: relative; z-index: 1;">🌍</div>
-                    <h3 style="color: #9966ff; font-size: 1.5em; margin-bottom: 15px; position: relative; z-index: 1;">Ressources</h3>
-                    <p style="color: #666; line-height: 1.6; margin-bottom: 20px; position: relative; z-index: 1;">Analyses de marché approfondies et contacts utiles</p>
-                    <span class="card-count" style="display: inline-block; background: #9966ff; color: white; padding: 8px 20px; border-radius: 20px; font-size: 0.9em; font-weight: 600; position: relative; z-index: 1;">Analyse + contacts</span>
-                </a>
+            <h2>Documents PDF</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Book FR (PDF)</h3>
+                    <p>Version PDF du book de presentation en francais.</p>
+                    <a href="Book_Bible_Chantee_FR.pdf" target="_blank">Telecharger</a>
+                </div>
+                <div class="card">
+                    <h3>Book Investisseurs (PDF)</h3>
+                    <p>Version PDF complete pour investisseurs.</p>
+                    <a href="Book_Investisseurs_Global_Bible_Chantee.pdf" target="_blank">Telecharger</a>
+                </div>
+                <div class="card">
+                    <h3>Pack Eglises</h3>
+                    <p>Documentation complete pour les eglises partenaires.</p>
+                    <a href="Pack_Complet_Eglises_Bible_Chantee.pdf" target="_blank">Telecharger</a>
+                </div>
+                <div class="card">
+                    <h3>Dossier Presse</h3>
+                    <p>Kit media et communiques de presse.</p>
+                    <a href="Dossier_Presse_Bible_Chantee.pdf" target="_blank">Telecharger</a>
+                </div>
             </div>
         </div>
-        <style>
-            .doc-card:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-            }
-        </style>
     </section>
 
-    <footer class="footer">
+    <section>
         <div class="container">
-            <p>© 2025 Bible Chantée - Tous droits réservés</p>
-            <p>Contact: <a href="mailto:global.opera.biblechantee@gmail.com">global.opera.biblechantee@gmail.com</a></p>
+            <h2>Documents Juridiques</h2>
+            <ul class="docs-list">
+                <li><a href="CGU_Bible_Chantee.pdf" target="_blank">Conditions Generales d'Utilisation (CGU)</a></li>
+                <li><a href="Mentions_Legales_Bible_Chantee.pdf" target="_blank">Mentions Legales</a></li>
+                <li><a href="Politique_Confidentialite_Bible_Chantee.pdf" target="_blank">Politique de Confidentialite</a></li>
+                <li><a href="Licence_Eglise_Bible_Chantee.pdf" target="_blank">Licence Eglise</a></li>
+            </ul>
         </div>
+    </section>
+
+    <section style="background: #1e293b;">
+        <div class="container">
+            <h2>Navigation Rapide</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Technique</h3>
+                    <p>Architecture, stack technologique et processus de generation.</p>
+                    <a href="technique.html">Explorer</a>
+                </div>
+                <div class="card">
+                    <h3>Commercial</h3>
+                    <p>Strategie commerciale et partenariats.</p>
+                    <a href="commercial.html">Explorer</a>
+                </div>
+                <div class="card">
+                    <h3>Financier</h3>
+                    <p>Modele economique et projections.</p>
+                    <a href="financier.html">Explorer</a>
+                </div>
+                <div class="card">
+                    <h3>Juridique</h3>
+                    <p>Cadre legal et licences.</p>
+                    <a href="juridique.html">Explorer</a>
+                </div>
+                <div class="card">
+                    <h3>Planification</h3>
+                    <p>Roadmap et jalons.</p>
+                    <a href="planification.html">Explorer</a>
+                </div>
+                <div class="card">
+                    <h3>Ressources</h3>
+                    <p>Liens et contacts utiles.</p>
+                    <a href="ressources.html">Explorer</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Bible Chantee - 2025 | <a href="https://global-opera.github.io/bible-chantee/">Site Principal</a> | <a href="mailto:global.opera.biblechantee@gmail.com">Contact</a></p>
     </footer>
 </body>
 </html>
