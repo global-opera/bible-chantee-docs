@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bible Chantée - Campagne Crowdfunding</title>
+    <title>Soutenir - Bible Chantée</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg-dark: #0a1628;
+            --bg-card: #0f2744;
+            --bg-card-hover: #153352;
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.7);
+            --accent-blue: #4a90d9;
+            --accent-gold: #d4af37;
+            --success-green: #22c55e;
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -15,538 +27,596 @@
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(180deg, #1a4a7a 0%, #0a1628 100%);
+            min-height: 100vh;
+            color: var(--text-primary);
         }
 
-        .hero {
-            background: linear-gradient(135deg, #000080 0%, #0000b0 100%);
-            color: white;
-            padding: 4rem 2rem;
+        .header {
             text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(180deg, #2a5a8a 0%, #1a4a7a 100%);
         }
 
-        .hero h1 {
+        .header h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero .subtitle {
-            font-size: 1.5rem;
-            color: #ffce00;
-            margin-bottom: 2rem;
-        }
-
-        .hero .goal {
-            background: rgba(255, 255, 255, 0.2);
-            display: inline-block;
-            padding: 1.5rem 3rem;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            margin: 2rem 0;
-        }
-
-        .hero .goal-amount {
-            font-size: 3rem;
+            font-size: 2.8rem;
             font-weight: 700;
-            color: #ffce00;
+            color: #a8c8e8;
+            margin-bottom: 0.5rem;
         }
 
-        .hero .goal-text {
+        .header .subtitle {
             font-size: 1.1rem;
-            opacity: 0.9;
+            color: var(--text-secondary);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+            background: var(--bg-dark);
+            border-bottom: 1px solid var(--border-color);
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover, .nav a.active {
+            color: var(--text-primary);
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 3rem 2rem;
-        }
-
-        .section {
-            background: white;
-            padding: 3rem;
-            margin: 2rem 0;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .section h2 {
-            font-family: 'Playfair Display', serif;
-            color: #000080;
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 3px solid #ffce00;
-        }
-
-        .section h3 {
-            font-family: 'Playfair Display', serif;
-            color: #000080;
-            font-size: 1.6rem;
-            margin: 2rem 0 1rem 0;
-        }
-
-        .section p {
-            margin: 1rem 0;
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        .section ul, .section ol {
-            margin: 1rem 0 1rem 2rem;
-        }
-
-        .section li {
-            margin: 0.5rem 0;
-            font-size: 1.05rem;
-        }
-
-        .impact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .impact-card {
-            background: #f8f9fa;
             padding: 2rem;
-            border-radius: 12px;
-            border-left: 5px solid #000080;
-            transition: all 0.3s ease;
         }
 
-        .impact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            border-left-color: #ffce00;
+        .card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border-color);
         }
 
-        .impact-card .icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .impact-card h4 {
-            color: #000080;
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .budget-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 2rem 0;
-        }
-
-        .budget-table th {
-            background: #000080;
-            color: white;
-            padding: 1rem;
-            text-align: left;
+        .card h2 {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.4rem;
+            color: var(--accent-blue);
+            margin-bottom: 1.5rem;
             font-weight: 600;
         }
 
-        .budget-table td {
-            padding: 1rem;
-            border-bottom: 1px solid #e5e7eb;
+        .card h2 .icon {
+            font-size: 1.5rem;
         }
 
-        .budget-table tr:hover {
-            background: #f8f9fa;
-        }
-
-        .budget-table .amount {
-            font-weight: 700;
-            color: #000080;
-            font-size: 1.2rem;
-        }
-
-        .cta-section {
-            background: linear-gradient(135deg, #000080 0%, #0000b0 100%);
-            color: white;
-            padding: 4rem 2rem;
+        /* Objectif Card */
+        .objectif-card {
+            background: linear-gradient(135deg, #1e3a5f 0%, #0f2744 100%);
+            border: 2px solid var(--accent-gold);
             text-align: center;
-            margin: 3rem 0;
-            border-radius: 15px;
+            padding: 2.5rem;
         }
 
-        .cta-button {
+        .objectif-amount {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin: 1rem 0;
+        }
+
+        .objectif-label {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+        }
+
+        .progress-bar-container {
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            height: 20px;
+            margin: 1.5rem 0;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-gold), #f5d742);
+            border-radius: 10px;
+            width: 2%;
+            transition: width 0.5s;
+        }
+
+        .progress-text {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-box {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-box .number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .stat-box .label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 0.3rem;
+        }
+
+        /* GoFundMe Button */
+        .gofundme-btn {
             display: inline-block;
-            background: #ffce00;
-            color: #000080;
-            padding: 1.5rem 3rem;
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            color: white;
+            padding: 1.2rem 3rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(255, 206, 0, 0.3);
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+            margin: 0.5rem;
         }
 
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255, 206, 0, 0.5);
+        .gofundme-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
         }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .stat-card {
-            background: #000080;
-            color: white;
-            padding: 2rem;
-            border-radius: 12px;
+        .center {
             text-align: center;
         }
 
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #ffce00;
+        .divider {
+            text-align: center;
+            color: var(--text-secondary);
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
         }
 
-        .stat-label {
-            font-size: 1rem;
-            opacity: 0.9;
+        /* Payment Grid */
+        .payment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .payment-card {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .payment-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-3px);
+        }
+
+        .payment-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .payment-card h3 {
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .payment-card .value {
+            font-family: monospace;
+            font-size: 0.95rem;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0.6rem;
+            border-radius: 8px;
+            color: var(--text-primary);
+            word-break: break-all;
+        }
+
+        .payment-card .note {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
             margin-top: 0.5rem;
         }
 
-        .timeline {
-            position: relative;
-            padding-left: 3rem;
-            margin: 2rem 0;
+        .payment-btn {
+            display: inline-block;
+            background: var(--accent-blue);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
         }
 
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: #000080;
+        .payment-btn:hover {
+            background: #5aa0e9;
+            transform: scale(1.05);
         }
 
-        .timeline-item {
-            position: relative;
-            margin-bottom: 2rem;
-            padding-left: 2rem;
+        .payment-btn.paypal {
+            background: #0070ba;
         }
 
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -3rem;
-            top: 0.5rem;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #ffce00;
-            border: 3px solid #000080;
+        .payment-btn.paypal:hover {
+            background: #003087;
         }
 
-        .timeline-item h4 {
-            color: #000080;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
+        .copy-btn {
+            background: transparent;
+            color: var(--accent-blue);
+            border: 1px solid var(--accent-blue);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            transition: all 0.3s;
+        }
+
+        .copy-btn:hover {
+            background: var(--accent-blue);
+            color: white;
+        }
+
+        /* Missionary Note */
+        .missionary-note {
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid var(--accent-gold);
+            padding: 1rem 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        .missionary-note strong {
+            color: var(--accent-gold);
+        }
+
+        /* Impact List */
+        .impact-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .impact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.8rem;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+
+        .impact-item .emoji {
+            font-size: 1.5rem;
+        }
+
+        .impact-item p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Quote */
+        .quote-card {
+            text-align: center;
+            font-style: italic;
+            color: var(--text-secondary);
+            padding: 2rem;
+        }
+
+        .quote-card .verse {
+            color: var(--accent-gold);
+            font-weight: 600;
+            margin-top: 1rem;
+            font-style: normal;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 2rem;
+        }
+
+        .footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .badge-success {
+            background: var(--success-green);
+            color: white;
+        }
+
+        .badge-progress {
+            background: #f59e0b;
+            color: white;
+        }
+
+        /* Status List */
+        .status-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .status-list li {
+            padding: 0.6rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--success-green);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            display: none;
+            z-index: 1000;
+            font-weight: 600;
+        }
+
+        .toast.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+            to { opacity: 1; transform: translateX(-50%) translateY(0); }
         }
 
         @media (max-width: 768px) {
-            .hero h1 {
+            .header h1 {
                 font-size: 2rem;
             }
-            .hero .goal-amount {
-                font-size: 2rem;
+            .objectif-amount {
+                font-size: 2.5rem;
             }
-            .section {
-                padding: 2rem 1.5rem;
+            .nav {
+                gap: 1rem;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
 </head>
 <body>
-    <div class="hero">
-        <h1>🎵 Bible Chantée</h1>
-        <p class="subtitle">La Parole de Dieu en musique pour le monde entier</p>
+    <!-- Header -->
+    <header class="header">
+        <h1>Bible Chantée</h1>
+        <p class="subtitle">Toute la Parole de Dieu en musique – 12 langues</p>
+    </header>
 
-        <div class="goal">
-            <div class="goal-amount">100'000 CHF</div>
-            <div class="goal-text">Objectif de la campagne • 45 jours</div>
-        </div>
-
-        <p style="font-size: 1.2rem; max-width: 800px; margin: 2rem auto;">
-            Un projet missionnaire unique : mettre toute la Bible en musique,
-            en 12 langues, accessible gratuitement partout sur Terre
-        </p>
-    </div>
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="index.html">Le Projet</a>
+        <a href="ecouter.html">Écouter</a>
+        <a href="eglises.html">Églises</a>
+        <a href="mission.html">Mission</a>
+        <a href="crowdfunding.html" class="active">Soutenir</a>
+        <a href="about.html">À propos</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
     <div class="container">
-        <div class="section">
-            <h2>📖 Le Projet</h2>
-            <p>
-                Je m'appelle Stéphane, et depuis plusieurs mois, je développe un projet unique au monde :
-                <strong>mettre toute la Bible en musique, en 12 langues, accessible gratuitement partout sur Terre.</strong>
-            </p>
+        <!-- Objectif Card -->
+        <div class="card objectif-card">
+            <h2 style="justify-content: center; color: var(--accent-gold);"><span class="icon">🎯</span> Objectif de la collecte</h2>
+            <div class="objectif-amount">CHF 100'000</div>
+            <div class="objectif-label">Pour finaliser les 12 langues et l'application mobile</div>
+            <div class="progress-bar-container">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="progress-text">Collecte en cours - Chaque don compte !</div>
+        </div>
 
+        <!-- Donate Card -->
+        <div class="card">
+            <h2><span class="icon">💝</span> Faire un don maintenant</h2>
+            
+            <div class="center" style="margin-bottom: 1.5rem;">
+                <a href="https://gofund.me/65145a53b" target="_blank" class="gofundme-btn">
+                    🚀 Donner via GoFundMe
+                </a>
+            </div>
+            
+            <p class="divider">— ou par virement direct (sans frais de plateforme) —</p>
+            
+            <div class="payment-grid">
+                <div class="payment-card">
+                    <div class="icon">🏦</div>
+                    <h3>Virement bancaire</h3>
+                    <div class="value">CH96 0900 0000 1422 5706 6</div>
+                    <div class="note">PostFinance Suisse<br>Stéphane Cassani</div>
+                    <button class="copy-btn" onclick="copyToClipboard('CH9609000000142257066', 'IBAN copié !')">📋 Copier IBAN</button>
+                </div>
+
+                <div class="payment-card">
+                    <div class="icon">📱</div>
+                    <h3>Twint</h3>
+                    <div class="value">+41 78 212 53 63</div>
+                    <div class="note">Suisse uniquement<br>Scannez ou ajoutez le numéro</div>
+                    <button class="copy-btn" onclick="copyToClipboard('+41782125363', 'Numéro copié !')">📋 Copier numéro</button>
+                </div>
+
+                <div class="payment-card">
+                    <div class="icon">💳</div>
+                    <h3>PayPal</h3>
+                    <div class="value">scassani@gmail.com</div>
+                    <div class="note">Paiement mondial sécurisé</div>
+                    <a href="https://www.paypal.com/paypalme/scassani" target="_blank" class="payment-btn paypal">💳 Payer avec PayPal</a>
+                    <button class="copy-btn" onclick="copyToClipboard('scassani@gmail.com', 'Email copié !')">📋 Copier email</button>
+                </div>
+            </div>
+            
+            <div class="missionary-note">
+                🙏 <strong>10% de tous les dons seront reversés à des œuvres missionnaires chrétiennes.</strong>
+            </div>
+        </div>
+
+        <!-- Progress Card -->
+        <div class="card">
+            <h2><span class="icon">📊</span> Avancement du projet</h2>
             <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">1'189</div>
-                    <div class="stat-label">Chapitres bibliques</div>
+                <div class="stat-box">
+                    <div class="number">2378</div>
+                    <div class="label">chapitres générés</div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">12</div>
-                    <div class="stat-label">Langues prévues</div>
+                <div class="stat-box">
+                    <div class="number">2</div>
+                    <div class="label">langues complètes</div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">1'034</div>
-                    <div class="stat-label">Chapitres FR synchronisés</div>
+                <div class="stat-box">
+                    <div class="number">12</div>
+                    <div class="label">langues prévues</div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Gratuit</div>
+                <div class="stat-box">
+                    <div class="number">100%</div>
+                    <div class="label">gratuit</div>
                 </div>
             </div>
-
-            <h3>✅ Aujourd'hui, le projet existe déjà :</h3>
-            <ul>
-                <li>✅ <strong>Version française 100% terminée</strong> : 1'034 chapitres • 66 livres complets</li>
-                <li>✅ <strong>Site web opérationnel</strong> : <a href="https://biblechantee.netlify.app" target="_blank" style="color: #000080;">biblechantee.netlify.app</a></li>
-                <li>✅ <strong>Scroll automatique des paroles</strong> synchronisé avec l'audio</li>
-                <li>🚀 <strong>En cours</strong> : Portugais (PT-BR), Anglais (EN), Espagnol (ES)</li>
-                <li>✅ Un système industriel automatisé fonctionne (génération IA + scripts)</li>
-                <li>✅ 66 livres bibliques complets (Ancien + Nouveau Testament) avec 1'034 chapitres</li>
-                <li>✅ 12 langues planifiées (FR, EN, ES, PT, IT, DE, NL, PL, RO, HI, AR, ZH)</li>
-            </ul>
-
-            <h3>🚀 Mais pour aller plus loin, j'ai besoin de votre soutien</h3>
-            <p>Pour transformer ce projet en un outil missionnaire mondial, il faut :</p>
-            <ul>
-                <li>📱 Lancer l'application mobile (iOS + Android)</li>
-                <li>🌍 Diffuser sur les plateformes de streaming (Spotify, Apple Music, YouTube)</li>
-                <li>⚖️ Structurer juridiquement le projet (licences, RGPD, protection)</li>
-                <li>⛪ Équiper les églises du monde entier</li>
-                <li>💾 Garantir la pérennité sur le long terme</li>
+            <ul class="status-list">
+                <li>Version française : <span class="badge badge-success">Terminée</span></li>
+                <li>Version portugaise : <span class="badge badge-success">Terminée</span></li>
+                <li>Version anglaise : <span class="badge badge-progress">En cours</span></li>
+                <li>10 autres langues : en préparation (espagnol, allemand, russe, arabe, chinois, hindi, tagalog...)</li>
             </ul>
         </div>
 
-        <div class="section">
-            <h2>🌍 Pourquoi Bible Chantée ?</h2>
-            <p>Ce projet est conçu pour atteindre :</p>
-
-            <div class="impact-grid">
-                <div class="impact-card">
-                    <div class="icon">👶</div>
-                    <h4>Les enfants</h4>
-                    <p>Qui apprennent la Bible en chantant</p>
+        <!-- Impact Card -->
+        <div class="card">
+            <h2><span class="icon">🌍</span> Votre don permet</h2>
+            <div class="impact-list">
+                <div class="impact-item">
+                    <span class="emoji">👶</span>
+                    <p>Aux enfants d'apprendre la Bible en chantant</p>
                 </div>
-                <div class="impact-card">
-                    <div class="icon">📖</div>
-                    <h4>Les non-lecteurs</h4>
-                    <p>Qui n'ont pas accès à la Bible écrite</p>
+                <div class="impact-item">
+                    <span class="emoji">📖</span>
+                    <p>Aux non-lecteurs de découvrir la Parole de Dieu</p>
                 </div>
-                <div class="impact-card">
-                    <div class="icon">☪️</div>
-                    <h4>Les musulmans</h4>
-                    <p>Qui découvrent Jésus</p>
+                <div class="impact-item">
+                    <span class="emoji">⛪</span>
+                    <p>Aux églises persécutées d'accéder aux Écritures</p>
                 </div>
-                <div class="impact-card">
-                    <div class="icon">👴</div>
-                    <h4>Les personnes âgées</h4>
-                    <p>Qui mémorisent par la musique</p>
+                <div class="impact-item">
+                    <span class="emoji">👨‍👩‍👧</span>
+                    <p>Aux familles de prier ensemble en musique</p>
                 </div>
-                <div class="impact-card">
-                    <div class="icon">🔒</div>
-                    <h4>Les prisons</h4>
-                    <p>Où la Parole apporte l'espoir</p>
+                <div class="impact-item">
+                    <span class="emoji">🌐</span>
+                    <p>À 12 langues d'être générées gratuitement</p>
                 </div>
-                <div class="impact-card">
-                    <div class="icon">⛪</div>
-                    <h4>Les églises persécutées</h4>
-                    <p>Sans accès aux Bibles physiques</p>
-                </div>
-                <div class="impact-card">
-                    <div class="icon">👨‍👩‍👧</div>
-                    <h4>Les familles</h4>
-                    <p>Qui prient ensemble</p>
-                </div>
-                <div class="impact-card">
-                    <div class="icon">🌍</div>
-                    <h4>L'évangélisation</h4>
-                    <p>Mondiale</p>
+                <div class="impact-item">
+                    <span class="emoji">📱</span>
+                    <p>À l'application mobile d'être développée</p>
                 </div>
             </div>
         </div>
 
-        <div class="section">
-            <h2>💰 Budget Détaillé : 100'000 CHF</h2>
-            <p>Chaque franc sera utilisé de manière transparente pour :</p>
-
-            <table class="budget-table">
-                <thead>
-                    <tr>
-                        <th>Poste</th>
-                        <th>Montant</th>
-                        <th>Détail</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>📱 App mobile iOS/Android</td>
-                        <td class="amount">30'000 CHF</td>
-                        <td>Développement, tests, stores</td>
-                    </tr>
-                    <tr>
-                        <td>🌍 Site multilingue</td>
-                        <td class="amount">8'000 CHF</td>
-                        <td>Design, hébergement, sécurité</td>
-                    </tr>
-                    <tr>
-                        <td>🎧 Distribution streaming</td>
-                        <td class="amount">7'000 CHF</td>
-                        <td>Spotify, Apple Music, YouTube</td>
-                    </tr>
-                    <tr>
-                        <td>⚖️ Juridique & licences</td>
-                        <td class="amount">10'000 CHF</td>
-                        <td>Avocat, RGPD, droits d'auteur</td>
-                    </tr>
-                    <tr>
-                        <td>🎥 Communication vidéo</td>
-                        <td class="amount">10'000 CHF</td>
-                        <td>Teasers, montage, sous-titres</td>
-                    </tr>
-                    <tr>
-                        <td>📢 Publicité lancement</td>
-                        <td class="amount">15'000 CHF</td>
-                        <td>Meta, Google, YouTube, TikTok</td>
-                    </tr>
-                    <tr>
-                        <td>💾 Serveurs & stockage</td>
-                        <td class="amount">5'000 CHF</td>
-                        <td>Cloud, CDN, backups</td>
-                    </tr>
-                    <tr>
-                        <td>📄 Impression & dossiers</td>
-                        <td class="amount">5'000 CHF</td>
-                        <td>Books, flyers, supports</td>
-                    </tr>
-                    <tr>
-                        <td>🧱 Trésorerie de sécurité</td>
-                        <td class="amount">10'000 CHF</td>
-                        <td>Imprévus, support</td>
-                    </tr>
-                    <tr style="background: #000080; color: white; font-weight: 700;">
-                        <td>✅ TOTAL</td>
-                        <td class="amount" style="color: #ffce00;">100'000 CHF</td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="section">
-            <h2>📱 Ce que votre don permet</h2>
-            <ul style="font-size: 1.15rem; line-height: 2;">
-                <li>✅ Création de l'application <strong>Bible Chantée</strong> (iOS + Android)</li>
-                <li>✅ Diffusion sur <strong>Spotify, Apple Music, YouTube</strong></li>
-                <li>✅ <strong>Accès gratuit pour tous</strong>, partout dans le monde</li>
-                <li>✅ <strong>Versions hors ligne</strong> pour les zones sans internet</li>
-                <li>✅ <strong>Support pour les églises</strong> (licences, formations)</li>
-                <li>✅ <strong>Protection juridique</strong> (droits d'auteur, RGPD)</li>
-                <li>✅ <strong>Sauvegarde pérenne</strong> des données</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>⛪ Un projet missionnaire</h2>
-            <p style="font-size: 1.2rem; text-align: center; background: #fff8dc; padding: 2rem; border-radius: 12px; border-left: 5px solid #ffce00;">
-                🙏 <strong>10 % de tous les bénéfices seront reversés à des œuvres missionnaires chrétiennes.</strong>
-            </p>
-            <p style="text-align: center; margin-top: 2rem; font-size: 1.1rem;">
-                Ce projet n'est pas un business classique.<br>
-                <strong>C'est un outil pour le Royaume de Dieu.</strong>
-            </p>
-            <p style="text-align: center; margin-top: 1rem;">
-                L'objectif n'est pas de faire du profit, mais de :
-            </p>
-            <ul style="max-width: 600px; margin: 1rem auto;">
-                <li>Répandre la Parole de Dieu</li>
-                <li>Rendre la Bible accessible à tous</li>
-                <li>Équiper les églises du monde entier</li>
-                <li>Soutenir les œuvres missionnaires</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>📊 État d'Avancement du Projet</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h4>✅ Phase 1 : Version Française (TERMINÉE)</h4>
-                    <p>1'034 chapitres • 66 livres • Bible complète • Paroles synchronisées • Site web opérationnel</p>
-                </div>
-                <div class="timeline-item">
-                    <h4>🚀 Phase 2 : Langues PT-BR, EN, ES (EN COURS)</h4>
-                    <p>Génération automatique, adaptation culturelle, synchronisation</p>
-                </div>
-                <div class="timeline-item">
-                    <h4>🔜 Phase 3 : Application Mobile</h4>
-                    <p>Développement iOS + Android, tests, soumission aux stores</p>
-                </div>
-                <div class="timeline-item">
-                    <h4>🔜 Phase 4 : Distribution Streaming</h4>
-                    <p>Upload sur Spotify, Apple Music, YouTube Music</p>
-                </div>
-                <div class="timeline-item">
-                    <h4>🔜 Phase 5 : Expansion Mondiale</h4>
-                    <p>9 langues supplémentaires, campagne publicitaire, partenariats églises</p>
-                </div>
-            </div>
+        <!-- Quote Card -->
+        <div class="card quote-card">
+            "Chantez à l'Éternel un cantique nouveau !<br>
+            Chantez à l'Éternel, vous tous, habitants de la terre !"
+            <div class="verse">— Psaume 96:1</div>
         </div>
     </div>
 
-    <div class="cta-section">
-        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">✨ Participez à cette aventure</h2>
-        <p style="font-size: 1.3rem; margin-bottom: 2rem; opacity: 0.95;">
-            Ensemble, rendons la Parole de Dieu accessible en musique au monde entier
-        </p>
-        <a href="#" class="cta-button">
-            💝 Faire un don sur GoFundMe
-        </a>
-        <p style="margin-top: 2rem; font-size: 1.1rem; opacity: 0.9;">
-            Ou partagez cette campagne avec vos amis, votre église, vos réseaux sociaux
-        </p>
-    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Bible Chantée - Stéphane Cassani. Tous droits réservés.</p>
+        <p><a href="index.html">← Retour à l'accueil</a></p>
+    </footer>
 
-    <div class="container">
-        <div class="section" style="text-align: center;">
-            <p style="font-size: 1.2rem; font-style: italic; color: #666;">
-                "Chantez à l'Éternel un cantique nouveau!<br>
-                Chantez à l'Éternel, vous tous, habitants de la terre!"
-            </p>
-            <p style="margin-top: 1rem; font-weight: 600; color: #000080;">
-                - Psaume 96:1
-            </p>
-        </div>
+    <!-- Toast notification -->
+    <div class="toast" id="toast"></div>
 
-        <div class="section" style="background: #f8f9fa;">
-            <h3 style="text-align: center; color: #000080; margin-bottom: 2rem;">
-                🙏 Que Dieu vous bénisse pour votre générosité
-            </h3>
-            <p style="text-align: center; font-size: 1.1rem;">
-                © 2025 Bible Chantée - Stéphane Cassani<br>
-                Tous droits d'auteur réservés<br>
-                <a href="mailto:global.opera.biblechantee@gmail.com" style="color: #000080;">global.opera.biblechantee@gmail.com</a>
-            </p>
-        </div>
-    </div>
+    <script>
+        function copyToClipboard(text, message) {
+            navigator.clipboard.writeText(text).then(() => {
+                showToast(message || 'Copié !');
+            }).catch(() => {
+                // Fallback pour navigateurs plus anciens
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showToast(message || 'Copié !');
+            });
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2000);
+        }
+    </script>
 </body>
 </html>
